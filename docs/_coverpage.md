@@ -1,10 +1,6 @@
 <!-- _coverpage.md --> 
 
-
-
-![docsify](https://github.com/Benn314/docsify/raw/develop/docs/_media/icon.svg)
-
-![icon](http://kiveallen.top/images/icon.png)
+![logo](https://docsify.js.org/_media/icon.svg)
 
 # 凌云木 <small>❤️</small>
 
