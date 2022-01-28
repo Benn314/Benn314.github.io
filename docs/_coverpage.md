@@ -2,7 +2,9 @@
 
 
 
-<img src="http://kiveallen.top/images/icon.png" alt="icon" style="zoom:33%;" />
+<img src="http://kiveallen.top/images/icon.png" alt="icon" style="zoom: 25%;" />
+
+![logo](https://docsify.js.org/_media/icon.svg)
 
 # 凌云木 <small>❤️</small>
 
