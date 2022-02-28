@@ -26,7 +26,11 @@
 
 
 
-![image-20220228111146047](C:\Users\小楷\AppData\Roaming\Typora\typora-user-images\image-20220228111146047.png)
+![image-20220228111146047](https://github.com/Benn314/Benn314.github.io/blob/main/img/3.png)
+
+
+
+
 
 4、完毕
 
