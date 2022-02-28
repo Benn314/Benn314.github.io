@@ -26,7 +26,12 @@ git push origin master
 
 
 
+<<<<<<< HEAD
+
 <div align=center>
 <img src="https://github.com/Benn314/Benn314.github.io/blob/main/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220228104940.png" width="80%" height="80%">
 </div>
 Benn314.github.io/img/微信图片_20220228104940.png
+=======
+![img](https://github.com/Benn314/Benn314.github.io/blob/main/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220228104940.png)
+>>>>>>> f256b63 (message)
