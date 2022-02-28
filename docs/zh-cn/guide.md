@@ -24,5 +24,7 @@ git push origin master
 
 ![img](https://img-blog.csdn.net/20180321090020759?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L0FfUnVubmVy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-![image-20220228103513421](C:\Users\小楷\AppData\Roaming\Typora\typora-user-images\image-20220228103513421.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/70643377/155914828-4d5e79a1-b987-408e-8e81-3e306a42c556.png" width="80%" height="80%">
+</div>
 
