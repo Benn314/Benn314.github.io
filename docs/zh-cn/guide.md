@@ -24,9 +24,7 @@ git push origin master
 
 ![img](https://img-blog.csdn.net/20180321090020759?watermark/2/text/Ly9ibG9nLmNzZG4ubmV0L0FfUnVubmVy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-<div align=center>
-<img src="https://user-images.githubusercontent.com/70643377/155914828-4d5e79a1-b987-408e-8e81-3e306a42c556.png" width="80%" height="80%">
-</div>
+
 
 <div align=center>
 <img src="https://github.com/Benn314/Benn314.github.io/blob/main/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220228104940.png" width="80%" height="80%">
