@@ -6,7 +6,7 @@
 
 
 
-![image-20220228110807062](C:\Users\小楷\AppData\Roaming\Typora\typora-user-images\image-20220228110807062.png)
+![image-20220228110807062](https://github.com/Benn314/Benn314.github.io/blob/main/img/1.png)
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-![image-20220228110943257](C:\Users\小楷\AppData\Roaming\Typora\typora-user-images\image-20220228110943257.png)
+![image-20220228110943257](https://github.com/Benn314/Benn314.github.io/blob/main/img/2.png)
 
 
 
