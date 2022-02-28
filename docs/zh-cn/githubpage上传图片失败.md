@@ -37,4 +37,3 @@
 <div align=center>
 <img src="....png" width="80%" height="80%">
 </div>
-
