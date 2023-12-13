@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"benn314.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.13.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="如何在Dev-Cpp中使用C++11中的函数：stoi、to_string、unordered_map、unordered_set、auto 算法常用API：stoi to_string 用于 int to string unordered_map unordered_set auto vector打印的字符会变成ASCII值">
+    <meta name="description" content="参加蓝桥杯和天梯杯比赛时，使用 C++ 刷题的一些随笔">
 <meta property="og:type" content="article">
 <meta property="og:title" content="重拾 C++">
 <meta property="og:url" content="https://benn314.github.io/2023/12/13/%E9%87%8D%E6%8B%BEC++/index.html">
 <meta property="og:site_name" content="Ben&#39;s Blog">
-<meta property="og:description" content="如何在Dev-Cpp中使用C++11中的函数：stoi、to_string、unordered_map、unordered_set、auto 算法常用API：stoi to_string 用于 int to string unordered_map unordered_set auto vector打印的字符会变成ASCII值">
+<meta property="og:description" content="参加蓝桥杯和天梯杯比赛时，使用 C++ 刷题的一些随笔">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-13T02:34:51.375Z">
-<meta property="article:modified_time" content="2023-12-13T08:17:45.611Z">
+<meta property="article:modified_time" content="2023-12-13T12:31:48.911Z">
 <meta property="article:author" content="Ben">
 <meta name="twitter:card" content="summary">
 
@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -230,7 +230,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-12-13 10:34:51 / 修改时间：16:17:45" itemprop="dateCreated datePublished" datetime="2023-12-13T10:34:51+08:00">2023-12-13</time>
+      <time title="创建时间：2023-12-13 10:34:51 / 修改时间：20:31:48" itemprop="dateCreated datePublished" datetime="2023-12-13T10:34:51+08:00">2023-12-13</time>
     </span>
 
   
@@ -280,24 +280,30 @@
     
     <div class="post-body" itemprop="articleBody">
         <hr>
+<p>参加蓝桥杯和天梯杯比赛时，使用 C++ 刷题的一些随笔</p>
+<span id="more"></span>
+
 <p><a target="_blank" rel="noopener" href="https://www.liuchuo.net/archives/6565">如何在Dev-Cpp中使用C++11中的函数：stoi、to_string、unordered_map、unordered_set、auto</a></p>
 <h2 id="算法常用API："><a href="#算法常用API：" class="headerlink" title="算法常用API："></a>算法常用API：</h2><p>stoi</p>
 <p>to_string <em>用于 int to string</em></p>
 <p>unordered_map</p>
 <p>unordered_set</p>
 <p>auto</p>
+<p>​    </p>
+<blockquote>
 <p>vector打印的字符会变成ASCII值</p>
-<span id="more"></span>
-
-
+</blockquote>
+<p>​    </p>
 <h2 id="VS-2022-快捷键"><a href="#VS-2022-快捷键" class="headerlink" title="VS 2022 快捷键"></a>VS 2022 快捷键</h2><ul>
 <li><strong>Ctrl+D</strong>：快速复制当前行到下一行</li>
-<li><strong>Alt + ↑/↓</strong>：是移动当前行</li>
+<li><strong>Alt + ↑/↓</strong>：移动当前行</li>
 <li><strong>Ctrl+K+C</strong>：注释</li>
 <li><strong>Ctrl+K+U</strong>：取消注释</li>
 </ul>
+<p>​    </p>
 <h2 id="printVector"><a href="#printVector" class="headerlink" title="printVector"></a>printVector</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">printVector</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; v)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (vector&lt;<span class="type">int</span>&gt;::iterator it = v.<span class="built_in">begin</span>(); it != v.<span class="built_in">end</span>(); it++) &#123;</span><br><span class="line">		cout &lt;&lt; *it &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//插入</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test01</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; v1;</span><br><span class="line">	<span class="comment">//尾插</span></span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="number">10</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="number">20</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="number">30</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="number">40</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="number">50</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="string">&#x27;I&#x27;</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="string">&#x27;II&#x27;</span>);</span><br><span class="line">	<span class="built_in">printVector</span>(v1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">test01</span>(); <span class="comment">// 10 20 30 40 50 97 73 18761</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>​    </p>
 <h2 id="getline-cin-str"><a href="#getline-cin-str" class="headerlink" title="getline(cin,str)"></a>getline(cin,str)</h2><p>使用getline(cin,str) 获取单变量的输入字符，范围是一行（即忽视空格），该函数需要引入头文件#include <code>&lt;string&gt;</code></p>
 <p>‘\0’ 在c++中也是NULL的意思，即回车后，获取的字符就是‘\0’ ,也就是‘NULL’ 常用于条件判断</p>
 <p>天梯比赛中：一次输入便一次输出是可以的，不是说要等到全部输入完成才进行输出</p>
@@ -306,18 +312,23 @@
 
 <p>设置flag来控制 “ “ 达到末尾没有空格的目的</p>
 <p>set<strong>不允许</strong>容器中有<strong>重复</strong>的元素</p>
+<p>​    </p>
 <h2 id="存放元素"><a href="#存放元素" class="headerlink" title="存放元素"></a>存放元素</h2><p>set主用 <code>insert()</code>，vector主用 <code>push_back()</code></p>
-<h2 id="set-find"><a href="#set-find" class="headerlink" title="set-find()"></a>set-find()</h2><p><code>find(key);</code>  //查找key是否存在,若存在，返回该键的元素的迭代器；若不存在，返回set.end();</p>
+<p>​    </p>
+<h2 id="set-find"><a href="#set-find" class="headerlink" title="set-find()"></a>set-find()</h2><p><code>find(key);</code>  // 查找key是否存在,若存在，返回该键的元素的迭代器；若不存在，返回set.end();</p>
 <blockquote>
 <p>查找   —  find    （返回的是迭代器）</p>
 </blockquote>
+<p>​    </p>
 <h2 id="字符串大小写转换-cpp"><a href="#字符串大小写转换-cpp" class="headerlink" title="字符串大小写转换.cpp"></a>字符串大小写转换.cpp</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 转化方法2：利用 toupper() 和 tolower() 函数</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ConversionofLetterTwo</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">char</span> ch;</span><br><span class="line">	cin &gt;&gt; ch;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (ch &gt;= <span class="string">&#x27;a&#x27;</span> &amp;&amp; ch &lt;= <span class="string">&#x27;z&#x27;</span>)</span><br><span class="line">		ch = <span class="built_in">toupper</span>(ch);</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (ch &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; ch &lt;= <span class="string">&#x27;Z&#x27;</span>)</span><br><span class="line">		ch = <span class="built_in">tolower</span>(ch);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;Invaild Word\n&quot;</span> &lt;&lt; endl;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; ch &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">ConversionofLetterTwo</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>​    </p>
 <h2 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a>字符串反转</h2><p>使用 <code>algorithm</code> 中的 <code>reverse</code> 函数</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span>  </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span>  </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span>  </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;  </span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">    string s = <span class="string">&quot;hello&quot;</span>;  </span><br><span class="line">  </span><br><span class="line">    <span class="built_in">reverse</span>(s.<span class="built_in">begin</span>(),s.<span class="built_in">end</span>());  </span><br><span class="line">  </span><br><span class="line">    cout&lt;&lt;s&lt;&lt;endl;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
 
 <p>vector容器也适用，也是写成 <code>reverse(s.begin(),s.end()); </code></p>
 <p><strong>不定长数组用 vector</strong></p>
+<p>​    </p>
 <h2 id="vector是不定长数组，能用-访问元素"><a href="#vector是不定长数组，能用-访问元素" class="headerlink" title="vector是不定长数组，能用[]访问元素"></a>vector是不定长数组，能用[]访问元素</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 检测vector能否用[]访问元素</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; v1; <span class="comment">//无参构造</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		v1.<span class="built_in">push_back</span>(i);</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; v1[<span class="number">0</span>] &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; v1[<span class="number">1</span>] &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; v1[<span class="number">9</span>];</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -326,8 +337,10 @@
 <p>长度：数组用length()，容器用size()</p>
 <p>用临时数组来进行条件判断很好用 不要总想着在目的数组上进行数组改动 可以通过临时数组的改动 最后赋值给目的数组</p>
 <p>string库函数，<code>append()</code> 用于在字符串后面进行追加字符串操作</p>
+<p>​    </p>
 <h2 id="字符串的替换replace"><a href="#字符串的替换replace" class="headerlink" title="字符串的替换replace()"></a>字符串的替换replace()</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 字符串替换</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test02</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//替换</span></span><br><span class="line">	string str1 = <span class="string">&quot;abcdefgde&quot;</span>;</span><br><span class="line">	str1.<span class="built_in">replace</span>(<span class="number">4</span>, <span class="number">3</span>, <span class="string">&quot;1111&quot;</span>);</span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;str1 = &quot;</span> &lt;&lt; str1 &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">test02</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>​    </p>
 <h2 id="【问题】cin-getline-混合使用时不能输入-直接执行下一行"><a href="#【问题】cin-getline-混合使用时不能输入-直接执行下一行" class="headerlink" title="【问题】cin getline 混合使用时不能输入 直接执行下一行"></a>【问题】cin getline 混合使用时不能输入 直接执行下一行</h2><p>经常会遇到一个问题，就是需要混合使用cin&gt;&gt;, cin.getline(), getline()时，有时会碰到不等你输入，就直接运行下一行的情况</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">	<span class="type">int</span> N;</span><br><span class="line">	string c;</span><br><span class="line">	cin &gt;&gt; N;</span><br><span class="line">	cin &gt;&gt; c;</span><br><span class="line"></span><br><span class="line">	string s;</span><br><span class="line">	<span class="built_in">getline</span>(cin, s);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -339,9 +352,11 @@
 <p>修改过后的代码</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> N;</span><br><span class="line">	string c;</span><br><span class="line">	cin &gt;&gt; N;</span><br><span class="line">	cin &gt;&gt; c;</span><br><span class="line">	cin.<span class="built_in">get</span>(); <span class="comment">// 用 getchar();也行</span></span><br><span class="line">	<span class="comment">//getchar(); //如果是char c的话</span></span><br><span class="line">	string s;</span><br><span class="line">	<span class="built_in">getline</span>(cin, s);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>​    </p>
 <h2 id="sort-Algorithm"><a href="#sort-Algorithm" class="headerlink" title="sort() - Algorithm"></a>sort() - Algorithm</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方法一：定义比较函数（最常用）</span></span><br><span class="line"><span class="comment">//情况一：数组排列</span></span><br><span class="line"><span class="type">int</span> A[<span class="number">100</span>];</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp1</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span><span class="comment">//int为数组数据类型</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> a&gt;b;<span class="comment">//降序排列</span></span><br><span class="line"><span class="comment">//return a&lt;b;//默认的升序排列</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">sort</span>(A,A+<span class="number">100</span>,cmp1);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 参考文章：https://www.cnblogs.com/stones-dream/p/10183210.html</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="常犯的一个错误：段错误"><a href="#常犯的一个错误：段错误" class="headerlink" title="常犯的一个错误：段错误"></a>常犯的一个错误：段错误</h2><p>经常原因：for循环从最大长度到0 经常只改了第一条件，第三条件 i++总是忘记改成 i–</p>
+<p>​    </p>
+<h2 id="常犯的一个错误：段错误"><a href="#常犯的一个错误：段错误" class="headerlink" title="常犯的一个错误：段错误"></a>常犯的一个错误：段错误</h2><p>经常原因：for循环从最大长度到0 经常只改了第一条件，第三条件 i++ 总是忘记改成 i–</p>
 
     </div>
 
@@ -368,15 +383,6 @@
     <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6376f3ce8404e73d" async="async"></script>
   </div>
 
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2023/12/13/%E8%8A%B1%E5%8D%89/" rel="prev" title="以向日葵之名 道最后的告别......">
-                  <i class="fa fa-chevron-left"></i> 以向日葵之名 道最后的告别......
-                </a>
-            </div>
-            <div class="post-nav-item">
-            </div>
-          </div>
     </footer>
   </article>
 </div>
@@ -407,13 +413,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">36k</span>
+    <span title="站点总字数">1k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:10</span>
+    <span title="站点阅读时长">4 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
