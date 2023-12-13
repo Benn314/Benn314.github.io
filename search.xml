@@ -2484,4 +2484,12 @@
 <h2 id="常犯的一个错误：段错误"><a href="#常犯的一个错误：段错误" class="headerlink" title="常犯的一个错误：段错误"></a>常犯的一个错误：段错误</h2><p>经常原因：for循环从最大长度到0 经常只改了第一条件，第三条件 i++总是忘记改成 i–</p>
 -->]]></content>
   </entry>
+  <entry>
+    <title>test1213</title>
+    <url>/2023/12/13/test1213/</url>
+    <content><![CDATA[<p>测试本地图片是否能正确引用</p>
+<p><img data-src="test1213%5Cimage-20221122180842537.png" alt="test1213\image-20221122180842537.png"></p>
+<p>测试本地图片是否能正确引用</p>
+]]></content>
+  </entry>
 </search>
