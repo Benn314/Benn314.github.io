@@ -137,6 +137,11 @@
 <p>通常情况下，当你在使用 Git 进行网络操作（如 clone、push、pull 等）时，如果之前设置了 HTTP 代理，Git 将会通过该代理进行网络连接。但有时候代理可能会导致连接问题，或者你想要取消代理设置以直接连接网络，那么就可以使用这个命令来移除之前配置的 HTTP 代理。</p>
 <p>执行 <code>git config --global --unset http.proxy</code> 命令后，Git 将不再使用之前设置的 HTTP 代理，而是直接连接网络</p>
 <p>​    </p>
+<h3 id="图片预览"><a href="#图片预览" class="headerlink" title="图片预览"></a>图片预览</h3><p>Hexo-next 主题内置 fancybox 预览插件，fancybox: false 为 true 就行，如果没内置 fancybox 插件，需手动下载</p>
+<ul>
+<li><a href="https://luhuadong.com/hexo/hexo-fancybox.html">下载参考链接</a></li>
+</ul>
+<p>​    </p>
 <h3 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h3><ul>
 <li>即使你删除了 blog 中的 .deploy_git，通过 <code>hexo s</code> 部署还是能自动生成回来的</li>
 <li>博客线上环境完成部署大概有 2 分钟的滞后性，期间存在部分部署持续推进</li>
