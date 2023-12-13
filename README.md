@@ -20,8 +20,8 @@
 ### Todo
 
 - [ ] warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
-- [ ] 邮箱的地址
-- [ ] 鼠标点击特效更换
-- [ ] CSDN icon 更换为掘金
+- [x] 邮箱的地址
+- [x] 鼠标点击特效更换
+- [x] CSDN icon 更换为掘金
 - [ ] 图片预览
 

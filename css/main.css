@@ -2607,3 +2607,17 @@ body {
 .csdn:hover {
   opacity: 1;
 }
+.juejin {
+  background-image: url("/images/juejin.svg");
+  background-size: 1em 1em;
+  opacity: 0.9;
+  background-position: 0.05rem 0.2rem;
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 0rem;
+/*鼠标停留在图标上时，图标呈现发光效果*/
+}
+.juejin:hover {
+  opacity: 1;
+}
