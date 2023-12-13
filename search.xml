@@ -4,7 +4,7 @@
     <title>Hexo-Next主题配置教程</title>
     <url>/2023/12/13/Hexo-Next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h2 id="个人博客"><a href="#个人博客" class="headerlink" title="个人博客"></a>个人博客</h2><p>网页预览：<a href="https://benn314.github.io/">https://benn314.github.io/</a></p>
-<p><img data-src="Hexo-Next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.assets/image-20221122180842537.png" alt="Hexo-Next主题配置教程.assets\image-20221122180842537.png"></p>
+<p><img data-src="/2023/12/13/Hexo-Next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/image-20221122180842537.png" alt="Hexo-Next主题配置教程\image-20221122180842537.png"></p>
 <p>Hexo-Next 是一款我很喜欢的主题，布局简约，很适合用于搭配 live-2d 和 网格动画，打造属于自己的个人博客。博客目前部署于 <code>Github Pages</code></p>
 <p>相关Github仓库</p>
 <ul>
@@ -288,7 +288,7 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 外链播放器 溯（钢琴版）--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">frameborder</span>=<span class="string">&quot;no&quot;</span> <span class="attr">border</span>=<span class="string">&quot;0&quot;</span> <span class="attr">marginwidth</span>=<span class="string">&quot;0&quot;</span> <span class="attr">marginheight</span>=<span class="string">&quot;0&quot;</span> <span class="attr">width</span>=<span class="string">330</span> <span class="attr">height</span>=<span class="string">86</span> <span class="attr">src</span>=<span class="string">&quot;//music.163.com/outchain/player?type=2&amp;id=1433584979&amp;auto=1&amp;height=66&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>建议把标签放到侧边栏，在 <code>Blog/themes/next/layout/_macro/sidebar.njk</code> 或 <code>themes\hexo-theme-next\layout\_layout.njk</code> 文件下，选择位置粘贴进去，不同位置效果不同</p>
-<p><img data-src="Hexo-Next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.assets/image-20221122180842537.png" alt="image-20221122180842537"></p>
+<p><img data-src="/2023/12/13/Hexo-Next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/image-20221122180842537.png" alt="image-20221122180842537"></p>
 <p>由于网易云外链播放器每次只能选择一首歌，如果想要让播放器的功能更加全面丰富，我们可以通过安装插件 <code>Aplayer</code>来满足我们的需求</p>
 <h2 id="添加Aplayer音乐播放器-进阶"><a href="#添加Aplayer音乐播放器-进阶" class="headerlink" title="添加Aplayer音乐播放器(进阶)"></a>添加Aplayer音乐播放器(进阶)</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install aplayer --save</span><br></pre></td></tr></table></figure>
 
@@ -434,7 +434,7 @@
 <li><code>MAIL_SUBJECT_ADMIN</code>: 自定义新评论通知邮件标题</li>
 <li><code>MAIL_TEMPLATE_ADMIN</code>: 自定义新评论通知邮件内容</li>
 </ul>
-<p>注：<code>SMTP_USER</code> 和 <code>AUTHOR_EMAIL</code>都需要是完整的邮箱地址(<a href="mailto:&#88;&#88;&#x58;&#64;&#88;&#x58;&#88;&#46;&#99;&#111;&#109;">&#88;&#88;&#x58;&#64;&#88;&#x58;&#88;&#46;&#99;&#111;&#109;</a>)</p>
+<p>注：<code>SMTP_USER</code> 和 <code>AUTHOR_EMAIL</code>都需要是完整的邮箱地址(<a href="mailto:&#x58;&#88;&#88;&#64;&#88;&#x58;&#88;&#46;&#x63;&#111;&#x6d;">&#x58;&#88;&#88;&#64;&#88;&#x58;&#88;&#46;&#x63;&#111;&#x6d;</a>)</p>
 <p>如果你跟我一样使用QQ邮箱作为消息通知的话，使用的 <code>SMTP_PASS</code> 填入的是授权码而不是邮箱登录密码，<code>SMTP_PASS</code> 要到你邮箱开启，填入授权码：<img data-src="https://img-blog.csdnimg.cn/7ddd289199724489a7221ba5a1d3a6bf.png" alt="图9"></p>
 <h3 id="添加评论表情包"><a href="#添加评论表情包" class="headerlink" title="添加评论表情包"></a>添加评论表情包</h3><p>在主题配置文件下的 waline 添加如下 emoji 代码</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Waline 评论</span></span><br><span class="line"><span class="comment"># For more information: https://waline.js.org, https://github.com/walinejs/waline</span></span><br><span class="line"><span class="attr">waline:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#是否开启</span></span><br><span class="line">  <span class="string">......</span></span><br><span class="line">  <span class="attr">emoji:</span> [</span><br><span class="line">      <span class="string">https://unpkg.com/@waline/emojis@1.1.0/tw-emoji</span>, <span class="comment"># 加不加https头都可以</span></span><br><span class="line">      <span class="string">//unpkg.com/@waline/emojis@1.1.0/bilibili</span>,</span><br><span class="line">      <span class="string">//unpkg.com/@waline/emojis@1.1.0/alus</span>,</span><br><span class="line">      <span class="string">https://unpkg.com/@waline/emojis@1.1.0/weibo</span>,</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
