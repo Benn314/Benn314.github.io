@@ -2488,4 +2488,10 @@
 <p>测试本地图片是否能正确引用</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>aaa</title>
+    <url>/2023/12/13/aaa/</url>
+    <content><![CDATA[<p><img data-src="aaa/1.png" alt="img"></p>
+]]></content>
+  </entry>
 </search>
