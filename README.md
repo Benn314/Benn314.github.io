@@ -13,6 +13,14 @@
 
 <br />
 
-
 站点Site基于Hexo-next搭建，搭建教学 [请戳这里👈](https://juejin.cn/post/7169115268944560135)
+
+​	
+
+### Todo
+
+- [ ] warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+- [ ] 邮箱的地址
+- [ ] 鼠标点击特效更换
+- [ ] CSDN icon 更换为掘金
 
