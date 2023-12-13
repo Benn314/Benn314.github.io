@@ -83,4 +83,71 @@
 <h2 id="常犯的一个错误：段错误"><a href="#常犯的一个错误：段错误" class="headerlink" title="常犯的一个错误：段错误"></a>常犯的一个错误：段错误</h2><p>经常原因：for循环从最大长度到0 经常只改了第一条件，第三条件 i++ 总是忘记改成 i–</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>解决Hexo本地相对路径引用不生效的问题</title>
+    <url>/2023/12/13/%E8%A7%A3%E5%86%B3Hexo%E6%9C%AC%E5%9C%B0%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E5%BC%95%E7%94%A8%E4%B8%8D%E7%94%9F%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一年前搭建了此博客，由于本地仓库图片相对路径与线上环境图片引用地址不符导致线上图片无法正常显示，同时写博客文章需要耗费较多时间来进行内容验证和排版，故而废弃了博客，今天重新给它捡回来。</p>
+<span id="more"></span>
+
+<p>Hexo发布的文章被存放正在 <code>/source/_post</code> 中，这里我们以文章 <code>aaa</code> 为例，对应到线上环境的 url 地址变成了  <code>https://你的github用户名.github.io/year/month/day/aaa</code>，所以线上部署的图片如果想要正常显示，需要将其存放在该 url 地址的后面，因为最终被渲染后，是放在同一个文件夹下的，也就是 <code>https://你的github用户名.github.io/year/month/day/aaa/你的图片资源名</code> 但 Hexo 官方并没有对该情况做出合适的解决方案，只有一个原生方案是将你的静态资源放到 <code>public/image</code> 目录中进行统一管理，在部署阶段会将本地相对路径进行重定向，而这如果在博客文章日益累加的情况下，显然是不稳妥的方案，不仅不好管理，而且每次都需要将图片手动放入到该指定目录，并在文章中指定引用的方式，很不方便。我觉得应该借鉴类似 Typora 的文件资源管理：</p>
+<p><img data-src="/2023/12/13/%E8%A7%A3%E5%86%B3Hexo%E6%9C%AC%E5%9C%B0%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E5%BC%95%E7%94%A8%E4%B8%8D%E7%94%9F%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/Typora%E5%9B%BE%E5%83%8F.png" alt="Typora图像"></p>
+<p>​    </p>
+<h2 id="hexo-asset-image-插件失效原因分析"><a href="#hexo-asset-image-插件失效原因分析" class="headerlink" title="hexo-asset-image 插件失效原因分析"></a>hexo-asset-image 插件失效原因分析</h2><p>所以，Hexo 的社区便有人开发了解决此需求的第三方插件，<code>hexo-asset-image</code> 和 <code>hexo-asset-file</code></p>
+<p>呼声比较高的是 <code>hexo-asset-image</code>，但经过我的检验，<code>hexo-asset-image </code> 并不能解决我的需求，因为该插件与 <code>hexo-next-theme</code> 下的图片懒加载插件 <a href="https://github.com/ApoorvSaxena/lozad.js">lozad.js</a> 冲突，这个插件会将 <code>img</code> 的 <code>src</code> 属性改为 <code>data-src</code>，而 hexo-asset-image 的工作原理是统一处理 <code>src</code> ，没有对 <code>data-src</code> 等属性的判断，所以便不会处理图片，我个人是希望能增加用户体验的，所以并不想放弃懒加载动画。想提个 PR 也已经发现原插件仓库已经被归档了。</p>
+<p>​    </p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>后面采用 <a href="https://github.com/hqweay/hexo-asset-image">hexo-asset-file</a> 插件进行替代</p>
+<p>该仓库的 ChangeLog：</p>
+<blockquote>
+<p>2019-09-23: support hexo-lazyload-image<br>2019-09-23: fixed hexo-abbrlink using *.html image path error</p>
+</blockquote>
+<p>我们可以发现这个插件是满足我们的预期的，对 hexo 自带的懒加载插件做了冲突解决</p>
+<h3 id="Usege"><a href="#Usege" class="headerlink" title="Usege"></a>Usege</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-file --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="Config"><a href="#Config" class="headerlink" title="Config"></a>Config</h3><p><strong>Make sure <code>post_asset_folder: true</code> in your <code>_config.yml</code>.</strong></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1. root directory:</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://tech.panqingshan.cn</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. child directory</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://tech.panqingshan.cn/blog</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/blog/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new post <span class="string">&quot;文章名&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>通过此命令，我们可以得到一个新建md文章和对应的同级同名目录，当然你也可以选择手动创建，不过注意目录需要跟md文件名一一对应。</p>
+<br>
+
+<p>通过该插件，我们现在不仅可以在本地正常使用相对路径浏览，同时线上环境的图片地址也会有 <code>hexo-asset-file</code> 插件帮我们自动识别图片的本地相对路径并帮我们做转发，不管是在首页浏览还是进行文章详情页内，线上环境的图片都可正常显示。</p>
+<p>​    </p>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><h3 id="Hexo部署会自动删除README文件问题解决"><a href="#Hexo部署会自动删除README文件问题解决" class="headerlink" title="Hexo部署会自动删除README文件问题解决"></a>Hexo部署会自动删除README文件问题解决</h3><p>部署 Hexo 的时候发现根目录下 <code>README.md</code> 文件并没有被静态打包，Github 对应仓库缺少 README 文件介绍</p>
+<h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>我们在执行命令 <code>hexo g</code> 之后，Hexo 会打包 source 目录下的文件资源，把 source 目录里的 <code>.md</code> 格式的文件渲染为 html 文件并放到 public 下，而其他目录位置则不会被打包，继续执行命令 <code>hexo d</code> 之后，Hexo 会将 public 下面的所有文件提交到对应的 <code>你的GitHub用户名.github.io</code> 仓库；</p>
+<p>由于打包后本地 public 文件夹里没有 README.md 这个文件，所以在提交 public 文件时，Github 会认为你把 README.md 文件删除了，同时 Github 也会删掉仓库里的 README.md 文件，这就是具体的原因</p>
+<h4 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h4><p>我们可以将根目录下的 <code>README.md</code> 文件拷贝到 source目录下，并修改 Hexo 根目录下的 _config.yml 文件，将 skip_render 参数的值设置为 README.md</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">skip_render:</span> <span class="string">README.md</span></span><br><span class="line"></span><br><span class="line"><span class="string">//</span>  <span class="string">为什么需要设置这一步呢？</span></span><br><span class="line"><span class="string">//</span>  <span class="string">因为你执行hexo</span> <span class="string">g命令时，hexo</span> <span class="string">会默认将</span> <span class="string">source</span> <span class="string">文件里的所有md文件渲染为</span> <span class="string">html</span> <span class="string">文件放到</span> <span class="string">public</span> <span class="string">中，</span></span><br><span class="line"><span class="string">//</span>  <span class="string">同时</span> <span class="string">README.md</span> <span class="string">会被渲染为</span> <span class="string">README.html</span> <span class="string">文件放到</span> <span class="string">public</span> <span class="string">文件里</span></span><br><span class="line"><span class="string">//</span>  <span class="string">加上这段设置，就是告诉</span> <span class="string">hexo</span> <span class="string">的解析器，你在渲染</span> <span class="string">source</span> <span class="string">文件里的</span> <span class="string">md</span> <span class="string">文件时，跳过</span> <span class="string">README.md</span> <span class="string">文件</span></span><br></pre></td></tr></table></figure>
+
+<p>​    </p>
+<h3 id="Git-Bash-手动添加到右键菜单"><a href="#Git-Bash-手动添加到右键菜单" class="headerlink" title="Git Bash 手动添加到右键菜单"></a>Git Bash 手动添加到右键菜单</h3><p>由于之前电脑重新系统，Git 重新下载过程中忘记添加注册 Git Bash 在当前目录背景打开的指令，故而重新进行手动添加，基于 <a href="https://github.com/BluePointLilac/ContextMenuManager/releases/tag/3.3.3.1">ContextMenuManager</a> 右键菜单管理工具进行，添加 bash.exe 的安装路径即可</p>
+<p>​    </p>
+<h3 id="Failed-to-connect-to-github-com-port-443"><a href="#Failed-to-connect-to-github-com-port-443" class="headerlink" title="Failed to connect to github.com port 443"></a>Failed to connect to github.com port 443</h3><ul>
+<li><a href="https://blog.csdn.net/zpf1813763637/article/details/128340109">Git报错： Failed to connect to github.com port 443 解决方案-CSDN博客</a></li>
+</ul>
+<p>网络超时，使用 VPN 并配置代理（以下命令基于 <code>Clash for windows</code>，代理端口为 7890）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy 127.0.0.1:7890</span><br><span class="line"></span><br><span class="line"><span class="comment">#其他命令</span></span><br><span class="line">git config --global --get http.proxy <span class="comment"># 查看代理命令</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消代理命令</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
+
+<p>​    </p>
+<h4 id="git-config-–global-–unset-http-proxy-的作用"><a href="#git-config-–global-–unset-http-proxy-的作用" class="headerlink" title="git config –global –unset http.proxy 的作用"></a>git config –global –unset http.proxy 的作用</h4><blockquote>
+<p><strong>取消代理，状态变为直连</strong></p>
+</blockquote>
+<p><code>git config --global --unset http.proxy</code> 这个命令用于在全局 Git 配置中取消设置 HTTP 代理。具体作用是移除全局 Git 配置中的 HTTP 代理设置，从而使 Git 在执行网络操作时不再通过指定的 HTTP 代理进行连接。</p>
+<p>通常情况下，当你在使用 Git 进行网络操作（如 clone、push、pull 等）时，如果之前设置了 HTTP 代理，Git 将会通过该代理进行网络连接。但有时候代理可能会导致连接问题，或者你想要取消代理设置以直接连接网络，那么就可以使用这个命令来移除之前配置的 HTTP 代理。</p>
+<p>执行 <code>git config --global --unset http.proxy</code> 命令后，Git 将不再使用之前设置的 HTTP 代理，而是直接连接网络</p>
+<p>​    </p>
+<h3 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h3><ul>
+<li><p>即使你删除了 blog 中的 .deploy_git，通过 <code>hexo s</code> 部署还是能自动生成回来的</p>
+</li>
+<li><p>博客线上环境完成部署大概有 2 分钟的滞后性，期间存在部分部署持续推进</p>
+</li>
+</ul>
+<p>​    </p>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul>
+<li><a href="https://nopoetry.github.io/2020/08/03/Hexo%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/">Hexo博客插入图片的方法</a></li>
+<li><a href="https://leay.net/2019/12/25/hexo/">Hexo 引用本地图片以及引用本地任意位置图片的一点思路</a></li>
+<li><a href="https://blog.csdn.net/wxl1555/article/details/79291865">hexo系列问题之部署到github时会删掉README文件</a></li>
+</ul>
+]]></content>
+  </entry>
 </search>
