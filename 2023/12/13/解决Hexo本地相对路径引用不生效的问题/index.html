@@ -31,7 +31,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://benn314.github.io/2023/12/13/%E8%A7%A3%E5%86%B3Hexo%E6%9C%AC%E5%9C%B0%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E5%BC%95%E7%94%A8%E4%B8%8D%E7%94%9F%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/Typora%E5%9B%BE%E5%83%8F.png">
 <meta property="article:published_time" content="2023-12-13T09:35:29.000Z">
-<meta property="article:modified_time" content="2023-12-18T12:31:57.763Z">
+<meta property="article:modified_time" content="2023-12-19T12:29:42.188Z">
 <meta property="article:author" content="Ben">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -166,9 +166,15 @@
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-      <div class="site-state-item site-state-tags">
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
         <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">标签</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -244,7 +250,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-18 20:31:57" itemprop="dateModified" datetime="2023-12-18T20:31:57+08:00">2023-12-18</time>
+      <time title="修改时间：2023-12-19 20:29:42" itemprop="dateModified" datetime="2023-12-19T20:29:42+08:00">2023-12-19</time>
     </span>
 
   
@@ -324,14 +330,12 @@
 <h4 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h4><p>我们可以将根目录下的 <code>README.md</code> 文件拷贝到 source目录下，并修改 Hexo 根目录下的 _config.yml 文件，将 skip_render 参数的值设置为 README.md</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">skip_render:</span> <span class="string">README.md</span></span><br><span class="line"></span><br><span class="line"><span class="string">//</span>  <span class="string">为什么需要设置这一步呢？</span></span><br><span class="line"><span class="string">//</span>  <span class="string">因为你执行hexo</span> <span class="string">g命令时，hexo</span> <span class="string">会默认将</span> <span class="string">source</span> <span class="string">文件里的所有md文件渲染为</span> <span class="string">html</span> <span class="string">文件放到</span> <span class="string">public</span> <span class="string">中，</span></span><br><span class="line"><span class="string">//</span>  <span class="string">同时</span> <span class="string">README.md</span> <span class="string">会被渲染为</span> <span class="string">README.html</span> <span class="string">文件放到</span> <span class="string">public</span> <span class="string">文件里</span></span><br><span class="line"><span class="string">//</span>  <span class="string">加上这段设置，就是告诉</span> <span class="string">hexo</span> <span class="string">的解析器，你在渲染</span> <span class="string">source</span> <span class="string">文件里的</span> <span class="string">md</span> <span class="string">文件时，跳过</span> <span class="string">README.md</span> <span class="string">文件</span></span><br></pre></td></tr></table></figure>
 
-
 <h3 id="Git-Bash-手动添加到右键菜单"><a href="#Git-Bash-手动添加到右键菜单" class="headerlink" title="Git Bash 手动添加到右键菜单"></a>Git Bash 手动添加到右键菜单</h3><p>由于之前电脑重新系统，Git 重新下载过程中忘记添加注册 Git Bash 在当前目录背景打开的指令，故而重新进行手动添加，基于 <a target="_blank" rel="noopener" href="https://github.com/BluePointLilac/ContextMenuManager/releases/tag/3.3.3.1">ContextMenuManager</a> 右键菜单管理工具进行，添加 bash.exe 的安装路径即可</p>
 <h3 id="Failed-to-connect-to-github-com-port-443"><a href="#Failed-to-connect-to-github-com-port-443" class="headerlink" title="Failed to connect to github.com port 443"></a>Failed to connect to github.com port 443</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/zpf1813763637/article/details/128340109">Git报错： Failed to connect to github.com port 443 解决方案-CSDN博客</a></li>
 </ul>
 <p>网络超时，使用 VPN 并配置代理（以下命令基于 <code>Clash for windows</code>，代理端口为 7890）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy 127.0.0.1:7890</span><br><span class="line"></span><br><span class="line"><span class="comment">#其他命令</span></span><br><span class="line">git config --global --get http.proxy <span class="comment"># 查看代理命令</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消代理命令</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
-
 
 <h4 id="git-config-–global-–unset-http-proxy-的作用"><a href="#git-config-–global-–unset-http-proxy-的作用" class="headerlink" title="git config –global –unset http.proxy 的作用"></a>git config –global –unset http.proxy 的作用</h4><blockquote>
 <p><strong>取消代理，状态变为直连</strong></p>
@@ -384,7 +388,7 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/12/13/%E9%87%8D%E6%8B%BEC++/" rel="prev" title="重拾 C++">
+                <a href="/2022/12/13/%E9%87%8D%E6%8B%BEC++/" rel="prev" title="重拾 C++">
                   <i class="fa fa-chevron-left"></i> 重拾 C++
                 </a>
             </div>
