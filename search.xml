@@ -69,9 +69,6 @@
 
 <h2 id="常犯的一个错误：段错误"><a href="#常犯的一个错误：段错误" class="headerlink" title="常犯的一个错误：段错误"></a>常犯的一个错误：段错误</h2><p>经常原因：for循环从最大长度到0 经常只改了第一条件，第三条件 i++ 总是忘记改成 i–</p>
 ]]></content>
-      <categories>
-        <category>web前端</category>
-      </categories>
       <tags>
         <tag>C++</tag>
       </tags>
@@ -138,8 +135,11 @@
 <li><a href="https://blog.csdn.net/wxl1555/article/details/79291865">hexo系列问题之部署到github时会删掉README文件</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>web前端</category>
+      </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>Hexo, test1,test2</tag>
       </tags>
   </entry>
 </search>
