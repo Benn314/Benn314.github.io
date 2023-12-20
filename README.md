@@ -24,3 +24,4 @@
 - [X] warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
 - [x] 图片预览
 - [ ] 开发 Short 时刻
+  - [ ] 将 Short 分类改为标签
