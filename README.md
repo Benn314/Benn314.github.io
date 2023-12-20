@@ -19,6 +19,6 @@
 
 ### Todo
 
-- [ ] warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+- [x] warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
 - [x] 图片预览
 
