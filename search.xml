@@ -69,6 +69,9 @@
 
 <h2 id="常犯的一个错误：段错误"><a href="#常犯的一个错误：段错误" class="headerlink" title="常犯的一个错误：段错误"></a>常犯的一个错误：段错误</h2><p>经常原因：for循环从最大长度到0 经常只改了第一条件，第三条件 i++ 总是忘记改成 i–</p>
 ]]></content>
+      <categories>
+        <category>C</category>
+      </categories>
       <tags>
         <tag>C++</tag>
       </tags>
