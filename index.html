@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -207,7 +207,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://benn314.github.io/2023/12/20/%E5%B0%8F%E5%A4%A9%E6%89%8D%E7%94%B5%E8%84%91%E6%89%8B%E8%A1%A8-%E8%B5%B7%E9%A3%9E!/">
+    <link itemprop="mainEntityOfPage" href="https://benn314.github.io/2023/12/20/%E6%96%B0%E5%A2%9E-Short-%E6%97%B6%E5%88%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/Ben.jpg">
@@ -225,7 +225,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/20/%E5%B0%8F%E5%A4%A9%E6%89%8D%E7%94%B5%E8%84%91%E6%89%8B%E8%A1%A8-%E8%B5%B7%E9%A3%9E!/" class="post-title-link" itemprop="url">小天才电脑手表-起飞!</a>
+          <a href="/2023/12/20/%E6%96%B0%E5%A2%9E-Short-%E6%97%B6%E5%88%BB/" class="post-title-link" itemprop="url">新增 Short 时刻</a>
         </h2>
 
         <div class="post-meta-container">
@@ -237,7 +237,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-12-20 11:18:21 / 修改时间：11:31:34" itemprop="dateCreated datePublished" datetime="2023-12-20T11:18:21+08:00">2023-12-20</time>
+      <time title="创建时间：2023-12-20 14:42:33 / 修改时间：15:23:47" itemprop="dateCreated datePublished" datetime="2023-12-20T14:42:33+08:00">2023-12-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -258,8 +258,8 @@
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/2023/12/20/%E5%B0%8F%E5%A4%A9%E6%89%8D%E7%94%B5%E8%84%91%E6%89%8B%E8%A1%A8-%E8%B5%B7%E9%A3%9E!/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/2023/12/20/%E5%B0%8F%E5%A4%A9%E6%89%8D%E7%94%B5%E8%84%91%E6%89%8B%E8%A1%A8-%E8%B5%B7%E9%A3%9E!/" itemprop="commentCount"></span>
+    <a title="waline" href="/2023/12/20/%E6%96%B0%E5%A2%9E-Short-%E6%97%B6%E5%88%BB/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2023/12/20/%E6%96%B0%E5%A2%9E-Short-%E6%97%B6%E5%88%BB/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -270,7 +270,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>25</span>
+      <span>253</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -288,7 +288,130 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <img data-src="/2023/12/20/%E5%B0%8F%E5%A4%A9%E6%89%8D%E7%94%B5%E8%84%91%E6%89%8B%E8%A1%A8-%E8%B5%B7%E9%A3%9E!/小天才电脑手表-起飞!.jpg" style="zoom: 15%;">
+          <p>本来想实现类似 <a target="_blank" rel="noopener" href="https://diygod.cc/">diygod.cc</a> 中类似 Short 记录心情时刻都功能，但在 Hexo 中实现貌似有点麻烦（需要开发新的 Layout）但目前空闲时间并不多，只能先列个 Todo 了，以后有时间再回来看看。</p>
+<p><img data-src="/2023/12/20/%E6%96%B0%E5%A2%9E-Short-%E6%97%B6%E5%88%BB/Short.png" alt="image-20231220151755685"></p>
+<p>Hexo 社区中有 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-index">hexo-generator-index</a> 和第三方的 <a target="_blank" rel="noopener" href="https://github.com/Jamling/hexo-generator-index2/tree/master">hexo-generator-index2</a> ，本来的想法是拷贝一个首页并加上过滤器只包含 Short 相关的文章，但目前不知道如何 copy 首页🤣 目前的 Short 为 categories 和 tags 的子路由，只相当于在右侧菜单栏配备了路由，样式还是基于 categories 或 tags 的样式（仅包含文字），但这显然不是我想要的</p>
+<p>我希望 Short 应包含：</p>
+<ul>
+<li><input disabled type="checkbox"> <strong>文章瀑布流布局（含图片</strong>，Short 不必按时间划分（样式），只需按照日期排序）</li>
+<li><input disabled type="checkbox"> 九宫格（扩展）</li>
+<li><input disabled type="checkbox"> 实况（扩展）</li>
+<li><input disabled type="checkbox"> Short 左右导航只链接 Short（扩展，这部分应该可以基于过滤器来实现，过滤仅包含 Short）</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://benn314.github.io/2023/12/20/%E5%B0%8F%E5%A4%A9%E6%89%8D%E7%94%B5%E8%AF%9D%E6%89%8B%E8%A1%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Ben.jpg">
+      <meta itemprop="name" content="Ben">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ben's Blog">
+      <meta itemprop="description" content="欢迎来到我的世界💜">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Ben's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/20/%E5%B0%8F%E5%A4%A9%E6%89%8D%E7%94%B5%E8%AF%9D%E6%89%8B%E8%A1%A8/" class="post-title-link" itemprop="url">小天才电话手表</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-20 11:18:21 / 修改时间：14:41:32" itemprop="dateCreated datePublished" datetime="2023-12-20T11:18:21+08:00">2023-12-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Short/" itemprop="url" rel="index"><span itemprop="name">Short</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2023/12/20/%E5%B0%8F%E5%A4%A9%E6%89%8D%E7%94%B5%E8%AF%9D%E6%89%8B%E8%A1%A8/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2023/12/20/%E5%B0%8F%E5%A4%A9%E6%89%8D%E7%94%B5%E8%AF%9D%E6%89%8B%E8%A1%A8/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>33</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Hexo 发不了实况真的是太可惜了😥</p>
+<img data-src="/2023/12/20/%E5%B0%8F%E5%A4%A9%E6%89%8D%E7%94%B5%E8%AF%9D%E6%89%8B%E8%A1%A8/小天才电话手表.jpg" style="zoom: 15%;">
 
       
     </div>
@@ -356,7 +479,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-20 11:00:25" itemprop="dateModified" datetime="2023-12-20T11:00:25+08:00">2023-12-20</time>
+      <time title="修改时间：2023-12-20 14:39:16" itemprop="dateModified" datetime="2023-12-20T14:39:16+08:00">2023-12-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -389,7 +512,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.2k</span>
+      <span>2.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -409,7 +532,7 @@
     <div class="post-body" itemprop="articleBody">
           <hr>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>由于最开始新建该文章只是为了记录如何解决<code>&lt;u&gt;</code> Hexo 线上环境图片不显示的问题<code>&lt;/u&gt;</code> ，但随着补充内容逐渐增加，后续关于 Hexo 的一些小需求调整 or 遇到 XxxBug or 定制符合自己需求的样式，会汇总到该文章中。（注：文章内容目录没有改进，开篇主体仍是解决 Hexo 线上环境图片不显示的问题）</p>
+<p>由于最开始新建该文章只是为了记录如何解决<u> Hexo 线上环境图片不显示的问题</u> ，但随着补充内容逐渐增加，后续关于 Hexo 的一些小需求调整 or 遇到 XxxBug or 定制符合自己需求的样式，会汇总到该文章中。（注：文章内容目录没有改进，开篇主体仍是解决 Hexo 线上环境图片不显示的问题）</p>
 </blockquote>
           <!--noindex-->
             <div class="post-button">
@@ -589,13 +712,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">3k</span>
+    <span title="站点总字数">4k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">13 分钟</span>
+    <span title="站点阅读时长">14 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">

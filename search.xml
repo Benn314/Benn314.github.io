@@ -81,7 +81,7 @@
     <url>/2023/12/13/%E8%A7%A3%E5%86%B3Hexo%E6%9C%AC%E5%9C%B0%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E5%BC%95%E7%94%A8%E4%B8%8D%E7%94%9F%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<hr>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>由于最开始新建该文章只是为了记录如何解决<code>&lt;u&gt;</code> Hexo 线上环境图片不显示的问题<code>&lt;/u&gt;</code> ，但随着补充内容逐渐增加，后续关于 Hexo 的一些小需求调整 or 遇到 XxxBug or 定制符合自己需求的样式，会汇总到该文章中。（注：文章内容目录没有改进，开篇主体仍是解决 Hexo 线上环境图片不显示的问题）</p>
+<p>由于最开始新建该文章只是为了记录如何解决<u> Hexo 线上环境图片不显示的问题</u> ，但随着补充内容逐渐增加，后续关于 Hexo 的一些小需求调整 or 遇到 XxxBug or 定制符合自己需求的样式，会汇总到该文章中。（注：文章内容目录没有改进，开篇主体仍是解决 Hexo 线上环境图片不显示的问题）</p>
 </blockquote>
 <span id="more"></span>
 
@@ -107,14 +107,21 @@
 <br>
 
 <p>通过该插件，我们现在不仅可以在本地正常使用相对路径浏览，同时线上环境的图片地址也会有 <code>hexo-asset-file</code> 插件帮我们自动识别图片的本地相对路径并帮我们做转发，不管是在首页浏览还是进行文章详情页内，线上环境的图片都可正常显示。</p>
+<br>
+
+
 <h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><h3 id="Hexo部署会自动删除README文件问题解决"><a href="#Hexo部署会自动删除README文件问题解决" class="headerlink" title="Hexo部署会自动删除README文件问题解决"></a>Hexo部署会自动删除README文件问题解决</h3><p>部署 Hexo 的时候发现根目录下 <code>README.md</code> 文件并没有被静态打包，Github 对应仓库缺少 README 文件介绍</p>
 <h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>我们在执行命令 <code>hexo g</code> 之后，Hexo 会打包 source 目录下的文件资源，把 source 目录里的 <code>.md</code> 格式的文件渲染为 html 文件并放到 public 下，而其他目录位置则不会被打包，继续执行命令 <code>hexo d</code> 之后，Hexo 会将 public 下面的所有文件提交到对应的 <code>你的GitHub用户名.github.io</code> 仓库；</p>
 <p>由于打包后本地 public 文件夹里没有 README.md 这个文件，所以在提交 public 文件时，Github 会认为你把 README.md 文件删除了，同时 Github 也会删掉仓库里的 README.md 文件，这就是具体的原因</p>
 <h4 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h4><p>我们可以将根目录下的 <code>README.md</code> 文件拷贝到 source目录下，并修改 Hexo 根目录下的 _config.yml 文件，将 skip_render 参数的值设置为 README.md</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">skip_render:</span> <span class="string">README.md</span></span><br><span class="line"></span><br><span class="line"><span class="string">//</span>  <span class="string">为什么需要设置这一步呢？</span></span><br><span class="line"><span class="string">//</span>  <span class="string">因为你执行hexo</span> <span class="string">g命令时，hexo</span> <span class="string">会默认将</span> <span class="string">source</span> <span class="string">文件里的所有md文件渲染为</span> <span class="string">html</span> <span class="string">文件放到</span> <span class="string">public</span> <span class="string">中，</span></span><br><span class="line"><span class="string">//</span>  <span class="string">同时</span> <span class="string">README.md</span> <span class="string">会被渲染为</span> <span class="string">README.html</span> <span class="string">文件放到</span> <span class="string">public</span> <span class="string">文件里</span></span><br><span class="line"><span class="string">//</span>  <span class="string">加上这段设置，就是告诉</span> <span class="string">hexo</span> <span class="string">的解析器，你在渲染</span> <span class="string">source</span> <span class="string">文件里的</span> <span class="string">md</span> <span class="string">文件时，跳过</span> <span class="string">README.md</span> <span class="string">文件</span></span><br></pre></td></tr></table></figure>
 
+<br>
 
 <h3 id="Git-Bash-手动添加到右键菜单"><a href="#Git-Bash-手动添加到右键菜单" class="headerlink" title="Git Bash 手动添加到右键菜单"></a>Git Bash 手动添加到右键菜单</h3><p>由于之前电脑重新系统，Git 重新下载过程中忘记添加注册 Git Bash 在当前目录背景打开的指令，故而重新进行手动添加，基于 <a href="https://github.com/BluePointLilac/ContextMenuManager/releases/tag/3.3.3.1">ContextMenuManager</a> 右键菜单管理工具进行，添加 bash.exe 的安装路径即可</p>
+<br>
+
+
 <h3 id="Failed-to-connect-to-github-com-port-443"><a href="#Failed-to-connect-to-github-com-port-443" class="headerlink" title="Failed to connect to github.com port 443"></a>Failed to connect to github.com port 443</h3><ul>
 <li><a href="https://blog.csdn.net/zpf1813763637/article/details/128340109">Git报错： Failed to connect to github.com port 443 解决方案-CSDN博客</a></li>
 </ul>
@@ -127,11 +134,17 @@
 <p><code>git config --global --unset http.proxy</code> 这个命令用于在全局 Git 配置中取消设置 HTTP 代理。具体作用是移除全局 Git 配置中的 HTTP 代理设置，从而使 Git 在执行网络操作时不再通过指定的 HTTP 代理进行连接。</p>
 <p>通常情况下，当你在使用 Git 进行网络操作（如 clone、push、pull 等）时，如果之前设置了 HTTP 代理，Git 将会通过该代理进行网络连接。但有时候代理可能会导致连接问题，或者你想要取消代理设置以直接连接网络，那么就可以使用这个命令来移除之前配置的 HTTP 代理。</p>
 <p>执行 <code>git config --global --unset http.proxy</code> 命令后，Git 将不再使用之前设置的 HTTP 代理，而是直接连接网络</p>
+<br>
+
+
 <h3 id="Git-报错：LF-will-be-replaced-by-CRLF-the-next-time-Git-touches-it"><a href="#Git-报错：LF-will-be-replaced-by-CRLF-the-next-time-Git-touches-it" class="headerlink" title="Git 报错：LF will be replaced by CRLF the next time Git touches it"></a>Git 报错：LF will be replaced by CRLF the next time Git touches it</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global core.autocrlf <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>产生报错原因及解释，见 <code>&lt;u&gt;</code><a href="https://juejin.cn/post/7011146890045554695?searchId=20231220092019BBCF50D3B9C389440792">参考文章</a><code>&lt;/u&gt;</code></p>
+<p>产生报错原因及解释，见 <u><a href="https://juejin.cn/post/7011146890045554695?searchId=20231220092019BBCF50D3B9C389440792">参考文章</a></u></p>
 </blockquote>
+<br>
+
+
 <h3 id="新增关于、标签、分类页"><a href="#新增关于、标签、分类页" class="headerlink" title="新增关于、标签、分类页"></a><a href="https://github.com/Mrcxt/blog/issues/2">新增关于、标签、分类页</a></h3><blockquote>
 <p>关于、标签、分类页初始化 Hexo时是不存在相应页面的，需要手动创建</p>
 </blockquote>
@@ -151,14 +164,22 @@
 <ul>
 <li><a href="https://trifond.github.io/2018/12/05/hexo-folder-ignore-case/">参考链接</a></li>
 </ul>
+<br>
+
 <h3 id="新增图片预览"><a href="#新增图片预览" class="headerlink" title="新增图片预览"></a>新增图片预览</h3><p>Hexo-next 主题内置 fancybox 预览插件，fancybox: false 为 true 就行，如果没内置 fancybox 插件，需手动下载</p>
 <ul>
 <li><a href="https://luhuadong.com/hexo/hexo-fancybox.html">下载参考链接</a></li>
 </ul>
+<br>
+
+<h3 id="新增-Short-时刻"><a href="#新增-Short-时刻" class="headerlink" title="新增 Short 时刻"></a>新增 Short 时刻</h3><p>本来想实现类似 <a href="https://diygod.cc/">diygod.cc</a> 中类似 Short 记录心情时刻都功能，但在 Hexo 中实现貌似有点麻烦（需要开发新的 Layout）但目前空闲时间并不多，只能先列个 Todo 了，以后有时间再回来看看。</p>
+<br>
+
 <h3 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h3><ul>
 <li>即使你删除了 blog 中的 .deploy_git，通过 <code>hexo d</code> 部署还是能自动生成回来的</li>
 <li>博客线上环境完成部署大概有 2 分钟的滞后性，期间存在部分部署持续推进</li>
 <li><a href="https://guiblogs.com/hexo30-15/">移除 Hexo 文章點擊「閱讀全文」後網址出現的 #more _</a></li>
+<li>Typora中的制表符实行 <code>&lt;br /&gt;</code> 目前已知的只对 Github 生效，Hexo 无效</li>
 </ul>
 <h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul>
 <li><a href="https://nopoetry.github.io/2020/08/03/Hexo%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/">Hexo博客插入图片的方法</a></li>
@@ -174,9 +195,31 @@
       </tags>
   </entry>
   <entry>
-    <title>小天才电脑手表-起飞!</title>
-    <url>/2023/12/20/%E5%B0%8F%E5%A4%A9%E6%89%8D%E7%94%B5%E8%84%91%E6%89%8B%E8%A1%A8-%E8%B5%B7%E9%A3%9E!/</url>
-    <content><![CDATA[<img data-src="/2023/12/20/%E5%B0%8F%E5%A4%A9%E6%89%8D%E7%94%B5%E8%84%91%E6%89%8B%E8%A1%A8-%E8%B5%B7%E9%A3%9E!/小天才电脑手表-起飞!.jpg" style="zoom: 15%;">
+    <title>小天才电话手表</title>
+    <url>/2023/12/20/%E5%B0%8F%E5%A4%A9%E6%89%8D%E7%94%B5%E8%AF%9D%E6%89%8B%E8%A1%A8/</url>
+    <content><![CDATA[<p>Hexo 发不了实况真的是太可惜了😥</p>
+<img data-src="/2023/12/20/%E5%B0%8F%E5%A4%A9%E6%89%8D%E7%94%B5%E8%AF%9D%E6%89%8B%E8%A1%A8/小天才电话手表.jpg" style="zoom: 15%;">
+]]></content>
+      <categories>
+        <category>Short</category>
+      </categories>
+      <tags>
+        <tag>Short</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>新增 Short 时刻</title>
+    <url>/2023/12/20/%E6%96%B0%E5%A2%9E-Short-%E6%97%B6%E5%88%BB/</url>
+    <content><![CDATA[<p>本来想实现类似 <a href="https://diygod.cc/">diygod.cc</a> 中类似 Short 记录心情时刻都功能，但在 Hexo 中实现貌似有点麻烦（需要开发新的 Layout）但目前空闲时间并不多，只能先列个 Todo 了，以后有时间再回来看看。</p>
+<p><img data-src="/2023/12/20/%E6%96%B0%E5%A2%9E-Short-%E6%97%B6%E5%88%BB/Short.png" alt="image-20231220151755685"></p>
+<p>Hexo 社区中有 <a href="https://github.com/hexojs/hexo-generator-index">hexo-generator-index</a> 和第三方的 <a href="https://github.com/Jamling/hexo-generator-index2/tree/master">hexo-generator-index2</a> ，本来的想法是拷贝一个首页并加上过滤器只包含 Short 相关的文章，但目前不知道如何 copy 首页🤣 目前的 Short 为 categories 和 tags 的子路由，只相当于在右侧菜单栏配备了路由，样式还是基于 categories 或 tags 的样式（仅包含文字），但这显然不是我想要的</p>
+<p>我希望 Short 应包含：</p>
+<ul>
+<li><input disabled type="checkbox"> <strong>文章瀑布流布局（含图片</strong>，Short 不必按时间划分（样式），只需按照日期排序）</li>
+<li><input disabled type="checkbox"> 九宫格（扩展）</li>
+<li><input disabled type="checkbox"> 实况（扩展）</li>
+<li><input disabled type="checkbox"> Short 左右导航只链接 Short（扩展，这部分应该可以基于过滤器来实现，过滤仅包含 Short）</li>
+</ul>
 ]]></content>
       <categories>
         <category>Short</category>
