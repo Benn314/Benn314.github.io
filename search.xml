@@ -153,6 +153,23 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- 鼠标点击特效 --&gt;</span><br><span class="line">&#123;% if theme.fireworks %&#125;</span><br><span class="line">  &lt;canvas class=&quot;fireworks&quot; style=&quot;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&quot; &gt;&lt;/canvas&gt; </span><br><span class="line">  &lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.bootcss.com/animejs/2.2.0/anime.min.js&quot;&gt;&lt;/script&gt; </span><br><span class="line">  &lt;script type=&quot;text/javascript&quot; src=&quot;/js/fireworks.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- 鼠标光标 iPad --&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/cursor.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
 <h3 id="不可行的操作"><a href="#不可行的操作" class="headerlink" title="不可行的操作"></a>不可行的操作</h3><p>最开始我并没有创建新布局文件的想法（以为这样会有代码冗余，可能有更好的解决方案），但实际上一开始连修改的布局文件都不知道在哪定位，最后在 <code>themes\hexo-theme-next\layout\_partials\page\</code> 目录下，找到了可修改的局部布局文件，但一个个文件修改，实际上会更加麻烦，同时无法全部应用，因为有些网页是没有注册layout的，通过源代码可知，这一部分直接通过 else 进行判断了，所以这一部分你是无法直接添加 framework特效的，除非你在 page.njk 里进行新 layout 的注册。但是只想光标和点击样式对post 页面失效，所以就制定了新的适用于 post 的布局文件</p>
+<p>补充：同时将上述代码放到非 _layout 文件中，会造成效果延迟。可能的原因是</p>
+<ol>
+<li><strong>加载顺序不同</strong>: 如果这些代码片段分别位于不同文件中，加载页面时它们可能遵循不同的加载顺序。这可能导致 <code>anime.js</code> 或 <code>fireworks.js</code> 脚本延迟加载，因此烟花效果可能不会立即出现。</li>
+<li><strong>加载时间差异</strong>: 不同文件的加载时间可能会不同，尤其是如果它们位于不同的位置或从不同的服务器加载。</li>
+</ol>
+<p>要解决这个问题，可以尝试以下方法：</p>
+<ul>
+<li><p><strong>合并文件</strong>: 将这些代码片段合并到同一个文件中，并确保它们按照正确的顺序排列。这样可以确保 <code>anime.js</code> 和 <code>fireworks.js</code> 会在页面加载时按照正确的顺序加载和执行。</p>
+</li>
+<li><p><strong>异步加载</strong>: 使用 <code>defer</code> 或 <code>async</code> 属性来异步加载脚本文件，这有助于避免阻塞页面加载。例如：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">htmlCopy code<span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.bootcss.com/animejs/2.2.0/anime.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">src</span>=<span class="string">&quot;/js/fireworks.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p><strong>延迟执行</strong>: 将烟花效果的初始化或触发代码放置在页面加载完成后再执行的位置，以避免脚本尝试在相关元素还未完全加载时执行。</p>
+</li>
+<li><p><strong>调试和性能优化</strong>: 使用浏览器的开发者工具进行调试，查看网络面板和控制台，以确定脚本加载和执行的情况，并进行性能优化。</p>
+</li>
+</ul>
+<p>选择适合你情况的解决方法，可以确保烟花效果能够按照预期立即出现，而不是有延迟。</p>
 <br>
 
 <h3 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h3><ul>
