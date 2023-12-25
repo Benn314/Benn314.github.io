@@ -21,7 +21,16 @@
 
 ### Todo
 
-- [X] warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+- [x] warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
 - [x] 图片预览
 - [ ] 开发 Short 时刻
   - [ ] 将 Short 分类改为标签
+- [x] 全局懒加载
+- [x] 鼠标光标样式定制
+- [ ] Hexo 图片圆角样式修改
+- [ ] Waline评论系统样式优化
+- [ ] 光标样式和点击样式仅设置部分网页有效
+
+---
+
+- [ ] 博客从 Hexo 迁移至 <u>xLog or jekyll or cards</u>
