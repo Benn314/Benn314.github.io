@@ -2578,6 +2578,9 @@ body {
   background-size: 100% 100%;
   opacity: 0.85;
 }
+img {
+  border-radius: 20px;
+}
 /* 鼠标光标 cursor.css */
 #cursor {
   position: fixed;

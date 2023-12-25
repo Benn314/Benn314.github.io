@@ -1,66 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>小天才电话手表</title>
-    <url>/2023/12/20/%E5%B0%8F%E5%A4%A9%E6%89%8D%E7%94%B5%E8%AF%9D%E6%89%8B%E8%A1%A8/</url>
-    <content><![CDATA[<p>Hexo 发不了实况真的是太可惜了😥</p>
-<img data-src="https://ben-oss-1311050996.cos.ap-guangzhou.myqcloud.com/%E5%B0%8F%E5%A4%A9%E6%89%8D%E7%94%B5%E8%AF%9D%E6%89%8B%E8%A1%A8.jpg?q-sign-algorithm=sha1&q-ak=AKIDN8qIgKdGS07CtIJsbb4Y1PO0_vv51xfdNaglYZZk2GsQlHRHe61yLqdYxaCX185M&q-sign-time=1703485185;1703488785&q-key-time=1703485185;1703488785&q-header-list=host&q-url-param-list=ci-process&q-signature=d54b79fdeafeb31b0a50ae3e0dfad09fd9060eb6&x-cos-security-token=kiYwMGIUNzEd1Ml445KWZEpqnHU3Bpda7d4fd2e0996725b6af6c3e7290f75a78jNN6_opeAFGHhZX8YnkxcwxNFOnFqbMFgheT6tZP3rNw8zGeIcVhmYY_CKizHK7Lrx7F5ogSILdGCunO35UH46Rs9Uymhh9EPBwnL3c3BSvlylZtFO4r98TSUgYdWdbdVdyH4crTLOK-JIWEoQw3kMt61nWVNSZr_LVRKdodjEckZ4izQ0vpmy5J-WWn0R0-&ci-process=originImage" style="zoom: 15%;">
-
-]]></content>
-      <categories>
-        <category>Short</category>
-      </categories>
-      <tags>
-        <tag>Short</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>新增 Short 时刻</title>
-    <url>/2023/12/20/%E6%96%B0%E5%A2%9E-Short-%E6%97%B6%E5%88%BB/</url>
-    <content><![CDATA[<p>本来想实现类似 <a href="https://diygod.cc/">diygod.cc</a> 中类似 Short 记录心情时刻都功能，但在 Hexo 中实现貌似有点麻烦（需要开发新的 Layout）但目前空闲时间并不多，只能先列个 Todo 了，以后有时间再回来看看。</p>
-<p><img data-src="/2023/12/20/%E6%96%B0%E5%A2%9E-Short-%E6%97%B6%E5%88%BB/Short.png"></p>
-<p>Hexo 社区中有 <a href="https://github.com/hexojs/hexo-generator-index">hexo-generator-index</a> 和第三方的 <a href="https://github.com/Jamling/hexo-generator-index2/tree/master">hexo-generator-index2</a> ，本来的想法是拷贝一个首页并加上过滤器只包含 Short 相关的文章，但目前不知道如何 copy 首页🤣 目前的 Short 为 categories 和 tags 的子路由，只相当于在右侧菜单栏配备了路由，样式还是基于 categories 或 tags 的样式（仅包含文字），但这显然不是我想要的</p>
-<p>我希望 Short 应包含：</p>
-<ul>
-<li><input disabled type="checkbox"> <strong>文章瀑布流布局（含图片</strong>，Short 不必按时间划分（样式），只需按照日期排序）</li>
-<li><input disabled type="checkbox"> 九宫格（扩展）</li>
-<li><input disabled type="checkbox"> 实况（扩展）</li>
-<li><input disabled type="checkbox"> Short 左右导航只链接 Short（扩展，这部分应该可以基于过滤器来实现，过滤仅包含 Short）</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Short</category>
-      </categories>
-      <tags>
-        <tag>Short</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo 客制化及 Bug 解决</title>
-    <url>/2023/12/13/%E8%A7%A3%E5%86%B3Hexo%E6%9C%AC%E5%9C%B0%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E5%BC%95%E7%94%A8%E4%B8%8D%E7%94%9F%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <url>/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/</url>
     <content><![CDATA[<hr>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>由于最开始新建该文章只是为了记录如何解决<u> Hexo 线上环境图片不显示的问题</u> ，但随着补充内容逐渐增加，后续关于 Hexo 的一些小需求调整 or 遇到 XxxBug or 定制符合自己需求的样式，会汇总到该文章中。（注：文章内容目录没有改进，开篇主体仍是解决 Hexo 线上环境图片不显示的问题）</p>
+<p>最开始新建该文章只是为了记录如何解决<u> Hexo 线上环境图片不显示的问题</u> ，但随着补充内容逐渐增加，后续关于 Hexo 的一些小需求调整 or 遇到 XxxBug or 定制符合自己需求的样式，都会汇总到该文章中。</p>
 </blockquote>
 <span id="more"></span>
 
-<p>一年前搭建了此博客，由于本地仓库图片相对路径与线上环境图片引用地址不符导致线上图片无法正常显示，同时写博客文章需要耗费较多时间来进行内容验证和排版，故而废弃了博客，今天重新给它捡回来。</p>
+<h2 id="hexo-asset-image-插件失效原因分析"><a href="#hexo-asset-image-插件失效原因分析" class="headerlink" title="hexo-asset-image 插件失效原因分析"></a>hexo-asset-image 插件失效原因分析</h2><p>一年前搭建了此博客，由于本地仓库图片相对路径与线上环境图片引用地址不符导致线上图片无法正常显示，同时写博客文章需要耗费较多时间来进行内容验证和排版，故而废弃了博客，今天重新给它捡回来。</p>
 <p>Hexo发布的文章被存放正在 <code>/source/_post</code> 中，这里我们以文章 <code>aaa</code> 为例，对应到线上环境的 url 地址变成了  <code>https://你的github用户名.github.io/year/month/day/aaa</code>，所以线上部署的图片如果想要正常显示，需要将其存放在该 url 地址的后面，因为最终被渲染后，是放在同一个文件夹下的，也就是 <code>https://你的github用户名.github.io/year/month/day/aaa/你的图片资源名</code> 但 Hexo 官方并没有对该情况做出合适的解决方案，只有一个原生方案是将你的静态资源放到 <code>public/image</code> 目录中进行统一管理，在部署阶段会将本地相对路径进行重定向，而这如果在博客文章日益累加的情况下，显然是不稳妥的方案，不仅不好管理，而且每次都需要将图片手动放入到该指定目录，并在文章中指定引用的方式，很不方便。我觉得应该借鉴类似 Typora 的文件资源管理：</p>
-<p><img data-src="/2023/12/13/%E8%A7%A3%E5%86%B3Hexo%E6%9C%AC%E5%9C%B0%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E5%BC%95%E7%94%A8%E4%B8%8D%E7%94%9F%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/Typora%E5%9B%BE%E5%83%8F.png" alt="Typora图像"></p>
-<h2 id="hexo-asset-image-插件失效原因分析"><a href="#hexo-asset-image-插件失效原因分析" class="headerlink" title="hexo-asset-image 插件失效原因分析"></a>hexo-asset-image 插件失效原因分析</h2><p>所以，Hexo 的社区便有人开发了解决此需求的第三方插件，<code>hexo-asset-image</code> 和 <code>hexo-asset-file</code></p>
+<p><img data-src="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/Typora%E5%9B%BE%E5%83%8F.png"></p>
+<p>所以，Hexo 的社区便有人开发了解决此需求的第三方插件，<code>hexo-asset-image</code> 和 <code>hexo-asset-file</code></p>
 <p>呼声比较高的是 <code>hexo-asset-image</code>，但经过我的检验，<code>hexo-asset-image </code> 并不能解决我的需求，因为该插件与 <code>hexo-next-theme</code> 下的图片懒加载插件 <a href="https://github.com/ApoorvSaxena/lozad.js">lozad.js</a> 冲突，这个插件会将 <code>img</code> 的 <code>src</code> 属性改为 <code>data-src</code>，而 hexo-asset-image 的工作原理是统一处理 <code>src</code> ，没有对 <code>data-src</code> 等属性的判断，所以便不会处理图片，我个人是希望能增加用户体验的，所以并不想放弃懒加载动画。想提个 PR 也已经发现原插件仓库已经被归档了。</p>
-<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>后面采用 <a href="https://github.com/hqweay/hexo-asset-image">hexo-asset-file</a> 插件进行替代</p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>后面采用 <a href="https://github.com/hqweay/hexo-asset-image">hexo-asset-file</a> 插件进行替代</p>
 <p>该仓库的 ChangeLog：</p>
 <blockquote>
 <p>2019-09-23: support hexo-lazyload-image<br>2019-09-23: fixed hexo-abbrlink using *.html image path error</p>
 </blockquote>
 <p>我们可以发现这个插件是满足我们的预期的，对 hexo 自带的懒加载插件做了冲突解决</p>
-<h3 id="Usege"><a href="#Usege" class="headerlink" title="Usege"></a>Usege</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-file --save</span><br></pre></td></tr></table></figure>
+<h4 id="Usege"><a href="#Usege" class="headerlink" title="Usege"></a>Usege</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-file --save</span><br></pre></td></tr></table></figure>
 
-<h3 id="Config"><a href="#Config" class="headerlink" title="Config"></a>Config</h3><p><strong>Make sure <code>post_asset_folder: true</code> in your <code>_config.yml</code>.</strong></p>
+<h4 id="Config"><a href="#Config" class="headerlink" title="Config"></a>Config</h4><p><strong>Make sure <code>post_asset_folder: true</code> in your <code>_config.yml</code>.</strong></p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1. root directory:</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://tech.panqingshan.cn</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. child directory</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://tech.panqingshan.cn/blog</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/blog/</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new post <span class="string">&quot;文章名&quot;</span></span><br></pre></td></tr></table></figure>
+<h4 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new post <span class="string">&quot;文章名&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>通过此命令，我们可以得到一个新建md文章和对应的同级同名目录，当然你也可以选择手动创建，不过注意目录需要跟md文件名一一对应。</p>
 <br>
@@ -68,29 +33,31 @@
 <p>通过该插件，我们现在不仅可以在本地正常使用相对路径浏览，同时线上环境的图片地址也会有 <code>hexo-asset-file</code> 插件帮我们自动识别图片的本地相对路径并帮我们做转发，不管是在首页浏览还是进行文章详情页内，线上环境的图片都可正常显示。</p>
 <br>
 
-<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><ul>
+<h2 id="Hexo-Next-博客搭建教学"><a href="#Hexo-Next-博客搭建教学" class="headerlink" title="Hexo-Next 博客搭建教学"></a>Hexo-Next 博客搭建教学</h2><ul>
 <li><a href="https://juejin.cn/post/7169115268944560135#heading-28">Hexo-Next主题搭建个人博客最新配置教程！</a></li>
 <li><a href="https://juejin.cn/post/7226548855692574775">Github Pages 绑定域名</a></li>
 </ul>
-<h3 id="Hexo部署会自动删除README文件问题解决"><a href="#Hexo部署会自动删除README文件问题解决" class="headerlink" title="Hexo部署会自动删除README文件问题解决"></a>Hexo部署会自动删除README文件问题解决</h3><p>部署 Hexo 的时候发现根目录下 <code>README.md</code> 文件并没有被静态打包，Github 对应仓库缺少 README 文件介绍</p>
-<h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>我们在执行命令 <code>hexo g</code> 之后，Hexo 会打包 source 目录下的文件资源，把 source 目录里的 <code>.md</code> 格式的文件渲染为 html 文件并放到 public 下，而其他目录位置则不会被打包，继续执行命令 <code>hexo d</code> 之后，Hexo 会将 public 下面的所有文件提交到对应的 <code>你的GitHub用户名.github.io</code> 仓库；</p>
+<br>
+
+<h2 id="Hexo部署会自动删除README文件问题解决"><a href="#Hexo部署会自动删除README文件问题解决" class="headerlink" title="Hexo部署会自动删除README文件问题解决"></a>Hexo部署会自动删除README文件问题解决</h2><p>部署 Hexo 的时候发现根目录下 <code>README.md</code> 文件并没有被静态打包，Github 对应仓库缺少 README 文件介绍</p>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>我们在执行命令 <code>hexo g</code> 之后，Hexo 会打包 source 目录下的文件资源，把 source 目录里的 <code>.md</code> 格式的文件渲染为 html 文件并放到 public 下，而其他目录位置则不会被打包，继续执行命令 <code>hexo d</code> 之后，Hexo 会将 public 下面的所有文件提交到对应的 <code>你的GitHub用户名.github.io</code> 仓库；</p>
 <p>由于打包后本地 public 文件夹里没有 README.md 这个文件，所以在提交 public 文件时，Github 会认为你把 README.md 文件删除了，同时 Github 也会删掉仓库里的 README.md 文件，这就是具体的原因</p>
-<h4 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h4><p>我们可以将根目录下的 <code>README.md</code> 文件拷贝到 source目录下，并修改 Hexo 根目录下的 _config.yml 文件，将 skip_render 参数的值设置为 README.md</p>
+<h3 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h3><p>我们可以将根目录下的 <code>README.md</code> 文件拷贝到 source目录下，并修改 Hexo 根目录下的 _config.yml 文件，将 skip_render 参数的值设置为 README.md</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">skip_render:</span> <span class="string">README.md</span></span><br><span class="line"></span><br><span class="line"><span class="string">//</span>  <span class="string">为什么需要设置这一步呢？</span></span><br><span class="line"><span class="string">//</span>  <span class="string">因为你执行hexo</span> <span class="string">g命令时，hexo</span> <span class="string">会默认将</span> <span class="string">source</span> <span class="string">文件里的所有md文件渲染为</span> <span class="string">html</span> <span class="string">文件放到</span> <span class="string">public</span> <span class="string">中，</span></span><br><span class="line"><span class="string">//</span>  <span class="string">同时</span> <span class="string">README.md</span> <span class="string">会被渲染为</span> <span class="string">README.html</span> <span class="string">文件放到</span> <span class="string">public</span> <span class="string">文件里</span></span><br><span class="line"><span class="string">//</span>  <span class="string">加上这段设置，就是告诉</span> <span class="string">hexo</span> <span class="string">的解析器，你在渲染</span> <span class="string">source</span> <span class="string">文件里的</span> <span class="string">md</span> <span class="string">文件时，跳过</span> <span class="string">README.md</span> <span class="string">文件</span></span><br></pre></td></tr></table></figure>
 
 <br>
 
-<h3 id="Git-Bash-手动添加到右键菜单"><a href="#Git-Bash-手动添加到右键菜单" class="headerlink" title="Git Bash 手动添加到右键菜单"></a>Git Bash 手动添加到右键菜单</h3><p>由于之前电脑重新系统，Git 重新下载过程中忘记添加注册 Git Bash 在当前目录背景打开的指令，故而重新进行手动添加，基于 <a href="https://github.com/BluePointLilac/ContextMenuManager/releases/tag/3.3.3.1">ContextMenuManager</a> 右键菜单管理工具进行，添加 bash.exe 的安装路径即可</p>
+<h2 id="Git-Bash-手动添加到右键菜单"><a href="#Git-Bash-手动添加到右键菜单" class="headerlink" title="Git Bash 手动添加到右键菜单"></a>Git Bash 手动添加到右键菜单</h2><p>由于之前电脑重新系统，Git 重新下载过程中忘记添加注册 Git Bash 在当前目录背景打开的指令，故而重新进行手动添加，基于 <a href="https://github.com/BluePointLilac/ContextMenuManager/releases/tag/3.3.3.1">ContextMenuManager</a> 右键菜单管理工具进行，添加 bash.exe 的安装路径即可</p>
 <br>
 
 
-<h3 id="Failed-to-connect-to-github-com-port-443"><a href="#Failed-to-connect-to-github-com-port-443" class="headerlink" title="Failed to connect to github.com port 443"></a>Failed to connect to github.com port 443</h3><ul>
+<h2 id="Failed-to-connect-to-github-com-port-443"><a href="#Failed-to-connect-to-github-com-port-443" class="headerlink" title="Failed to connect to github.com port 443"></a>Failed to connect to github.com port 443</h2><ul>
 <li><a href="https://blog.csdn.net/zpf1813763637/article/details/128340109">Git报错： Failed to connect to github.com port 443 解决方案-CSDN博客</a></li>
 </ul>
 <p><strong>网络超时</strong>，使用 VPN 并配置代理（以下命令基于 <code>Clash for windows</code>，代理端口为 7890）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy 127.0.0.1:7890</span><br><span class="line"></span><br><span class="line"><span class="comment">#其他命令</span></span><br><span class="line">git config --global --get http.proxy <span class="comment"># 查看代理命令</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消代理命令</span></span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
 
-<h4 id="git-config-–global-–unset-http-proxy-的作用"><a href="#git-config-–global-–unset-http-proxy-的作用" class="headerlink" title="git config –global –unset http.proxy 的作用"></a>git config –global –unset http.proxy 的作用</h4><blockquote>
+<h3 id="git-config-–global-–unset-http-proxy-的作用"><a href="#git-config-–global-–unset-http-proxy-的作用" class="headerlink" title="git config –global –unset http.proxy 的作用"></a>git config –global –unset http.proxy 的作用</h3><blockquote>
 <p><strong>取消代理，状态变为直连</strong></p>
 </blockquote>
 <p><code>git config --global --unset http.proxy</code> 这个命令用于在全局 Git 配置中取消设置 HTTP 代理。具体作用是移除全局 Git 配置中的 HTTP 代理设置，从而使 Git 在执行网络操作时不再通过指定的 HTTP 代理进行连接。</p>
@@ -99,7 +66,7 @@
 <br>
 
 
-<h3 id="Git-报错：LF-will-be-replaced-by-CRLF-the-next-time-Git-touches-it"><a href="#Git-报错：LF-will-be-replaced-by-CRLF-the-next-time-Git-touches-it" class="headerlink" title="Git 报错：LF will be replaced by CRLF the next time Git touches it"></a>Git 报错：LF will be replaced by CRLF the next time Git touches it</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global core.autocrlf <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h2 id="Git-报错：LF-will-be-replaced-by-CRLF-the-next-time-Git-touches-it"><a href="#Git-报错：LF-will-be-replaced-by-CRLF-the-next-time-Git-touches-it" class="headerlink" title="Git 报错：LF will be replaced by CRLF the next time Git touches it"></a>Git 报错：LF will be replaced by CRLF the next time Git touches it</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global core.autocrlf <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>产生报错原因及解释，见 <u><a href="https://juejin.cn/post/7011146890045554695?searchId=20231220092019BBCF50D3B9C389440792">参考文章</a></u></p>
@@ -107,7 +74,7 @@
 <br>
 
 
-<h3 id="新增关于、标签、分类页"><a href="#新增关于、标签、分类页" class="headerlink" title="新增关于、标签、分类页"></a><a href="https://github.com/Mrcxt/blog/issues/2">新增关于、标签、分类页</a></h3><blockquote>
+<h2 id="新增关于、标签、分类页"><a href="#新增关于、标签、分类页" class="headerlink" title="新增关于、标签、分类页"></a><a href="https://github.com/Mrcxt/blog/issues/2">新增关于、标签、分类页</a></h2><blockquote>
 <p>关于、标签、分类页初始化 Hexo时是不存在相应页面的，需要手动创建</p>
 </blockquote>
 <ul>
@@ -115,7 +82,7 @@
 <li>如果标签页和分类页的内容（例如子标签）无法正常显示，务必在各自 md 文档的 meta 中加上 <code>layout: &quot;tags&quot;</code>  &amp;  <code>layout: &quot;categories&quot;</code>，确保使用了正确的布局文件</li>
 <li>标题给出的参考链接版本较老，nav 可对应为 menu</li>
 </ul>
-<h4 id="子标签线上环境无法正常打开"><a href="#子标签线上环境无法正常打开" class="headerlink" title="子标签线上环境无法正常打开"></a>子标签线上环境无法正常打开</h4><p>分类页和标签页下的子标签线上环境无法正常打开其页面，是因为<strong>Hexo部署到Github后文件夹名大小写引起的问题</strong>，我们需要更改 <code>.deploy_git/.git/config</code> 中关于大小写不敏感的配置</p>
+<h3 id="子标签线上环境无法正常打开"><a href="#子标签线上环境无法正常打开" class="headerlink" title="子标签线上环境无法正常打开"></a>子标签线上环境无法正常打开</h3><p>分类页和标签页下的子标签线上环境无法正常打开其页面，是因为<strong>Hexo部署到Github后文件夹名大小写引起的问题</strong>，我们需要更改 <code>.deploy_git/.git/config</code> 中关于大小写不敏感的配置</p>
 <p>打开 <code>.git</code> 目录下的config文件并修改 <code>ignorecase = true</code> 为 <code>ignorecase = false</code></p>
 <figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="string">[core]</span></span><br><span class="line">repositoryformatversion = <span class="number">0</span></span><br><span class="line">filemode = <span class="literal">true</span></span><br><span class="line">bare = <span class="literal">false</span></span><br><span class="line">logallrefupdates = <span class="literal">true</span></span><br><span class="line">ignorecase = <span class="literal">true</span>   ##修改<span class="literal">true</span>为<span class="literal">false</span></span><br><span class="line">precomposeunicode = <span class="literal">true</span></span><br><span class="line">…</span><br></pre></td></tr></table></figure>
 
@@ -124,20 +91,29 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g -d</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><a href="https://trifond.github.io/2018/12/05/hexo-folder-ignore-case/">参考链接</a></li>
+<li><a href="https://trifond.github.io/2018/12/05/hexo-folder-ignore-case/">参考链接🔗</a></li>
 </ul>
 <br>
 
-<h3 id="新增图片预览"><a href="#新增图片预览" class="headerlink" title="新增图片预览"></a>新增图片预览</h3><p>Hexo-next 主题内置 fancybox 预览插件，fancybox: false 为 true 就行，如果没内置 fancybox 插件，需手动下载</p>
+<h2 id="新增图片预览"><a href="#新增图片预览" class="headerlink" title="新增图片预览"></a>新增图片预览</h2><p>Hexo-next 主题内置 fancybox 预览插件，fancybox: false 为 true 就行，如果没内置 fancybox 插件，需手动下载</p>
 <ul>
 <li><a href="https://luhuadong.com/hexo/hexo-fancybox.html">下载参考链接</a></li>
 </ul>
 <br>
 
-<h3 id="新增-Short-时刻"><a href="#新增-Short-时刻" class="headerlink" title="新增 Short 时刻"></a>新增 Short 时刻</h3><p>本来想实现类似 <a href="https://diygod.cc/">diygod.cc</a> 中类似 Short 记录心情时刻都功能，但在 Hexo 中实现貌似有点麻烦（需要开发新的 Layout）但目前空闲时间并不多，只能先列个 Todo 了，以后有时间再回来看看。</p>
+<h2 id="新增-Short-时刻"><a href="#新增-Short-时刻" class="headerlink" title="新增 Short 时刻"></a>新增 Short 时刻</h2><p>本来想实现类似 <a href="https://diygod.cc/">diygod.cc</a> 中类似 Short 记录心情时刻都功能，但在 Hexo 中实现貌似有点麻烦（需要开发新的 Layout）但目前空闲时间并不多，只能先列个 Todo 了，以后有时间再回来看看。</p>
+<p><img data-src="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/Short.png"></p>
+<p>Hexo 社区中有 <a href="https://github.com/hexojs/hexo-generator-index">hexo-generator-index</a> 和第三方的 <a href="https://github.com/Jamling/hexo-generator-index2/tree/master">hexo-generator-index2</a> ，本来的想法是拷贝一个首页并加上过滤器只包含 Short 相关的文章，但目前不知道如何 copy 首页🤣 目前的 Short 为 categories 和 tags 的子路由，只相当于在右侧菜单栏配备了路由，样式还是基于 categories 或 tags 的样式（仅包含文字），但这显然不是我想要的</p>
+<p>我希望 Short 应包含：</p>
+<ul>
+<li><input disabled type="checkbox"> <strong>文章瀑布流布局（含图片</strong>，Short 不必按时间划分（样式），只需按照日期排序）</li>
+<li><input disabled type="checkbox"> 九宫格（扩展）</li>
+<li><input disabled type="checkbox"> 实况（扩展）</li>
+<li><input disabled type="checkbox"> Short 左右导航只链接 Short（扩展，这部分应该可以基于过滤器来实现，过滤仅包含 Short）</li>
+</ul>
 <br>
 
-<h3 id="切换暗色风格"><a href="#切换暗色风格" class="headerlink" title="切换暗色风格"></a>切换暗色风格</h3><p>安装 <code>hexo-next-darkmode</code> 插件</p>
+<h2 id="切换暗色风格"><a href="#切换暗色风格" class="headerlink" title="切换暗色风格"></a>切换暗色风格</h2><p>安装 <code>hexo-next-darkmode</code> 插件</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-next-darkmode --save</span><br></pre></td></tr></table></figure>
 
 <p>配置参数，在 Next 主题的 <code>_config.yml</code> 配置文件里添加以下内容</p>
@@ -155,7 +131,7 @@
 </ul>
 <br>
 
-<h3 id="更改鼠标指针样式"><a href="#更改鼠标指针样式" class="headerlink" title="更改鼠标指针样式"></a>更改鼠标指针样式</h3><p>将 cursor.js 文件导入 <code>\themes\hexo-theme-next\layout\_layout.njk</code> （这里实现的是全局样式），将相关的 cursor.css 导入到 <code>source\_data\styles.styl</code> ，下面给出源码：</p>
+<h2 id="更改鼠标指针样式"><a href="#更改鼠标指针样式" class="headerlink" title="更改鼠标指针样式"></a>更改鼠标指针样式</h2><p>将 cursor.js 文件导入 <code>\themes\hexo-theme-next\layout\_layout.njk</code> （这里实现的是全局样式），将相关的 cursor.css 导入到 <code>source\_data\styles.styl</code> ，下面给出源码：</p>
 <p><strong>cursor.js</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="variable constant_">CURSOR</span>;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Math</span>.<span class="property">lerp</span> = <span class="function">(<span class="params">a, b, n</span>) =&gt;</span> (<span class="number">1</span> - n) * a + n * b;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">getStyle</span> = (<span class="params">el, attr</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">window</span>.<span class="property">getComputedStyle</span></span><br><span class="line">            ? <span class="variable language_">window</span>.<span class="title function_">getComputedStyle</span>(el)[attr]</span><br><span class="line">            : el.<span class="property">currentStyle</span>[attr];</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cursor</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">pos</span> = &#123;<span class="attr">curr</span>: <span class="literal">null</span>, <span class="attr">prev</span>: <span class="literal">null</span>&#125;;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">pt</span> = [];</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">create</span>();</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">init</span>();</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">render</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">move</span>(<span class="params">left, top</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">style</span>[<span class="string">&quot;left&quot;</span>] = <span class="string">`<span class="subst">$&#123;left&#125;</span>px`</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">style</span>[<span class="string">&quot;top&quot;</span>] = <span class="string">`<span class="subst">$&#123;top&#125;</span>px`</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">create</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="variable language_">this</span>.<span class="property">cursor</span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">cursor</span> = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;div&quot;</span>);</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">id</span> = <span class="string">&quot;cursor&quot;</span>;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&quot;hidden&quot;</span>);</span><br><span class="line">            <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">append</span>(<span class="variable language_">this</span>.<span class="property">cursor</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> el = <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&#x27;*&#x27;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; el.<span class="property">length</span>; i++)</span><br><span class="line">            <span class="keyword">if</span> (<span class="title function_">getStyle</span>(el[i], <span class="string">&quot;cursor&quot;</span>) == <span class="string">&quot;pointer&quot;</span>)</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">pt</span>.<span class="title function_">push</span>(el[i].<span class="property">outerHTML</span>);</span><br><span class="line"></span><br><span class="line">        <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>((<span class="variable language_">this</span>.<span class="property">scr</span> = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;style&quot;</span>)));</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">scr</span>.<span class="property">innerHTML</span> = <span class="string">`* &#123;cursor: url(&quot;data:image/svg+xml,&lt;svg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 8 8&#x27; width=&#x27;8px&#x27; height=&#x27;8px&#x27;&gt;&lt;circle cx=&#x27;4&#x27; cy=&#x27;4&#x27; r=&#x27;4&#x27; opacity=&#x27;.5&#x27;/&gt;&lt;/svg&gt;&quot;) 4 4, auto&#125;`</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">refresh</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">scr</span>.<span class="title function_">remove</span>();</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;hover&quot;</span>);</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;active&quot;</span>);</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">pos</span> = &#123;<span class="attr">curr</span>: <span class="literal">null</span>, <span class="attr">prev</span>: <span class="literal">null</span>&#125;;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">pt</span> = [];</span><br><span class="line"></span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">create</span>();</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">init</span>();</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">render</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">init</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">document</span>.<span class="property">onmouseover</span>  = <span class="function"><span class="params">e</span> =&gt;</span> <span class="variable language_">this</span>.<span class="property">pt</span>.<span class="title function_">includes</span>(e.<span class="property">target</span>.<span class="property">outerHTML</span>) &amp;&amp; <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&quot;hover&quot;</span>);</span><br><span class="line">        <span class="variable language_">document</span>.<span class="property">onmouseout</span>   = <span class="function"><span class="params">e</span> =&gt;</span> <span class="variable language_">this</span>.<span class="property">pt</span>.<span class="title function_">includes</span>(e.<span class="property">target</span>.<span class="property">outerHTML</span>) &amp;&amp; <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;hover&quot;</span>);</span><br><span class="line">        <span class="variable language_">document</span>.<span class="property">onmousemove</span>  = <span class="function"><span class="params">e</span> =&gt;</span> &#123;(<span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">curr</span> == <span class="literal">null</span>) &amp;&amp; <span class="variable language_">this</span>.<span class="title function_">move</span>(e.<span class="property">clientX</span> - <span class="number">8</span>, e.<span class="property">clientY</span> - <span class="number">8</span>); <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">curr</span> = &#123;<span class="attr">x</span>: e.<span class="property">clientX</span> - <span class="number">8</span>, <span class="attr">y</span>: e.<span class="property">clientY</span> - <span class="number">8</span>&#125;; <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;hidden&quot;</span>);&#125;;</span><br><span class="line">        <span class="variable language_">document</span>.<span class="property">onmouseenter</span> = <span class="function"><span class="params">e</span> =&gt;</span> <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;hidden&quot;</span>);</span><br><span class="line">        <span class="variable language_">document</span>.<span class="property">onmouseleave</span> = <span class="function"><span class="params">e</span> =&gt;</span> <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&quot;hidden&quot;</span>);</span><br><span class="line">        <span class="variable language_">document</span>.<span class="property">onmousedown</span>  = <span class="function"><span class="params">e</span> =&gt;</span> <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&quot;active&quot;</span>);</span><br><span class="line">        <span class="variable language_">document</span>.<span class="property">onmouseup</span>    = <span class="function"><span class="params">e</span> =&gt;</span> <span class="variable language_">this</span>.<span class="property">cursor</span>.<span class="property">classList</span>.<span class="title function_">remove</span>(<span class="string">&quot;active&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">x</span> = <span class="title class_">Math</span>.<span class="title function_">lerp</span>(<span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">x</span>, <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">curr</span>.<span class="property">x</span>, <span class="number">0.15</span>);</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">y</span> = <span class="title class_">Math</span>.<span class="title function_">lerp</span>(<span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">y</span>, <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">curr</span>.<span class="property">y</span>, <span class="number">0.15</span>);</span><br><span class="line">            <span class="variable language_">this</span>.<span class="title function_">move</span>(<span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">x</span>, <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span>.<span class="property">y</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">prev</span> = <span class="variable language_">this</span>.<span class="property">pos</span>.<span class="property">curr</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="title function_">requestAnimationFrame</span>(<span class="function">() =&gt;</span> <span class="variable language_">this</span>.<span class="title function_">render</span>());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable constant_">CURSOR</span> = <span class="keyword">new</span> <span class="title class_">Cursor</span>();</span><br><span class="line">    <span class="comment">// 需要重新获取列表时，使用 CURSOR.refresh()</span></span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 
@@ -165,12 +141,26 @@
 <ul>
 <li><a href="https://blog.xecades.xyz/articles/cursor/">参考链接🔗</a></li>
 </ul>
+<br>
+
+<h2 id="腾讯云对象存储文件链接"><a href="#腾讯云对象存储文件链接" class="headerlink" title="腾讯云对象存储文件链接"></a>腾讯云对象存储文件链接</h2><p>如果直接在文件列表中 copy 文件链接的，是有效期为一小时的临时链接，我们需要进入文件详情 copy 永久链接才不会太闹心（安全隐患现在不是我们的优先考虑项，让图片长时间的正常预览显示才是）</p>
+<p><img data-src="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/%E8%85%BE%E8%AE%AF%E4%BA%91-%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8-%E6%96%87%E4%BB%B6%E5%88%97%E8%A1%A8.png"></p>
+<p><img data-src="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/%E8%85%BE%E8%AE%AF%E4%BA%91-%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8-%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5.png"></p>
+<br>
+
+<h2 id="仅对指定布局运用光标和点击样式"><a href="#仅对指定布局运用光标和点击样式" class="headerlink" title="仅对指定布局运用光标和点击样式"></a>仅对指定布局运用光标和点击样式</h2><p>为了增强阅读专注体验，我移除了post页面上的 framework 和 mac 光标样式，操作如下：</p>
+<p>创建新的布局文件，暂且命名为 _layout-for-post-ben.njk（注意这里文件必须以 <code>_</code> 为开头），否则会被 Hexo 编译导致无法正常使用，在新布局文件中删除以下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- 鼠标点击特效 --&gt;</span><br><span class="line">&#123;% if theme.fireworks %&#125;</span><br><span class="line">  &lt;canvas class=&quot;fireworks&quot; style=&quot;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&quot; &gt;&lt;/canvas&gt; </span><br><span class="line">  &lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.bootcss.com/animejs/2.2.0/anime.min.js&quot;&gt;&lt;/script&gt; </span><br><span class="line">  &lt;script type=&quot;text/javascript&quot; src=&quot;/js/fireworks.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- 鼠标光标 iPad --&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/cursor.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="不可行的操作"><a href="#不可行的操作" class="headerlink" title="不可行的操作"></a>不可行的操作</h3><p>最开始我并没有创建新布局文件的想法（以为这样会有代码冗余，可能有更好的解决方案），但实际上一开始连修改的布局文件都不知道在哪定位，最后在 <code>themes\hexo-theme-next\layout\_partials\page\</code> 目录下，找到了可修改的局部布局文件，但一个个文件修改，实际上会更加麻烦，同时无法全部应用，因为有些网页是没有注册layout的，通过源代码可知，这一部分直接通过 else 进行判断了，所以这一部分你是无法直接添加 framework特效的，除非你在 page.njk 里进行新 layout 的注册。但是只想光标和点击样式对post 页面失效，所以就制定了新的适用于 post 的布局文件</p>
+<br>
+
 <h3 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h3><ul>
 <li>即使你删除了 blog 中的 .deploy_git，通过 <code>hexo d</code> 部署还是能自动生成回来的</li>
 <li>博客线上环境完成部署大概有 2 分钟的滞后性，期间存在部分部署持续推进</li>
 <li><a href="https://guiblogs.com/hexo30-15/">移除 Hexo 文章點擊「閱讀全文」後網址出現的 #more _</a></li>
 <li>Typora中的制表符实行 <code>&lt;br /&gt;</code> 目前已知的只对 Github 生效，Hexo 无效</li>
-<li>删除：Aplayer、fork me on github入口、darkmode、clicklove–2023年12月25日 14点06分</li>
+<li>删除：Aplayer(插件)、fork me on github(样式)、darkmode(插件)、clicklove(样式)、pace(lazyload)、<u>motion(优化，补充：motion中的fadeIn设置了下移的样式，有时间看看如何优化)</u>、其他优化更新都记录在此文章中了 – 2023年12月25日</li>
 </ul>
 <h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul>
 <li><a href="https://nopoetry.github.io/2020/08/03/Hexo%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/">Hexo博客插入图片的方法</a></li>

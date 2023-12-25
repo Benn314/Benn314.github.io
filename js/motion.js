@@ -62,8 +62,8 @@ NexT.motion.middleWares = {
     document.querySelectorAll('.menu-item').forEach(targets => {
       sequence.push({
         targets,
-        complete: () => targets.classList.add('animated', 'fadeInDown'),
-        deltaT: '-=200'
+        complete: () => targets.classList.add('animated', 'fadeInRight'),
+        deltaT: '-=10'
       });
     });
 
