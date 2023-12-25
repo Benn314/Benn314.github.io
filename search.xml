@@ -148,6 +148,13 @@
 <p><img data-src="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/%E8%85%BE%E8%AE%AF%E4%BA%91-%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8-%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5.png"></p>
 <br>
 
+<h2 id="Motion-Loading"><a href="#Motion-Loading" class="headerlink" title="Motion Loading"></a>Motion Loading</h2><p>关于全局的 Motion 动画，有一点想说的</p>
+<ul>
+<li><a href="https://github.com/iissnan/hexo-theme-next/issues/669">如何实现页面加载中的过渡动画 · Issue #669 · iissnan/hexo-theme-next · GitHub</a><img data-src="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/motion.png"></li>
+</ul>
+<p>Hexo-next 的 （pace属性）页面加载动画可选项不多，后面看腻了就给关了，并把 motion 动画设置为 async，在加载速度和美化之间做了一个平衡，Hexo 如果将 motion 设置为 false，加载效率会大大提升（纯静态，无后台数据交互）</p>
+<br>
+
 <h2 id="仅对指定布局运用光标和点击样式"><a href="#仅对指定布局运用光标和点击样式" class="headerlink" title="仅对指定布局运用光标和点击样式"></a>仅对指定布局运用光标和点击样式</h2><p>为了增强阅读专注体验，我移除了post页面上的 framework 和 mac 光标样式，操作如下：</p>
 <p>创建新的布局文件，暂且命名为 _layout-for-post-ben.njk（注意这里文件必须以 <code>_</code> 为开头），否则会被 Hexo 编译导致无法正常使用，在新布局文件中删除以下代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- 鼠标点击特效 --&gt;</span><br><span class="line">&#123;% if theme.fireworks %&#125;</span><br><span class="line">  &lt;canvas class=&quot;fireworks&quot; style=&quot;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&quot; &gt;&lt;/canvas&gt; </span><br><span class="line">  &lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.bootcss.com/animejs/2.2.0/anime.min.js&quot;&gt;&lt;/script&gt; </span><br><span class="line">  &lt;script type=&quot;text/javascript&quot; src=&quot;/js/fireworks.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- 鼠标光标 iPad --&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/cursor.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
@@ -163,13 +170,19 @@
 <li><p><strong>合并文件</strong>: 将这些代码片段合并到同一个文件中，并确保它们按照正确的顺序排列。这样可以确保 <code>anime.js</code> 和 <code>fireworks.js</code> 会在页面加载时按照正确的顺序加载和执行。</p>
 </li>
 <li><p><strong>异步加载</strong>: 使用 <code>defer</code> 或 <code>async</code> 属性来异步加载脚本文件，这有助于避免阻塞页面加载。例如：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">htmlCopy code<span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.bootcss.com/animejs/2.2.0/anime.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">src</span>=<span class="string">&quot;/js/fireworks.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.bootcss.com/animejs/2.2.0/anime.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">src</span>=<span class="string">&quot;/js/fireworks.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
 <li><p><strong>延迟执行</strong>: 将烟花效果的初始化或触发代码放置在页面加载完成后再执行的位置，以避免脚本尝试在相关元素还未完全加载时执行。</p>
 </li>
 <li><p><strong>调试和性能优化</strong>: 使用浏览器的开发者工具进行调试，查看网络面板和控制台，以确定脚本加载和执行的情况，并进行性能优化。</p>
 </li>
 </ul>
 <p>选择适合你情况的解决方法，可以确保烟花效果能够按照预期立即出现，而不是有延迟。</p>
+<br>
+
+<h2 id="修改-motion-js-加快动画"><a href="#修改-motion-js-加快动画" class="headerlink" title="修改 motion.js 加快动画"></a>修改 motion.js 加快动画</h2><p>进入 motion.js，修改 duration 属性（默认是 duration=200 | 500，detalT 是 200）修改成 duration=100 和 detalT=10</p>
+<ul>
+<li><a href="https://yxzi.xyz/posts/9570/">参考链接🔗</a></li>
+</ul>
 <br>
 
 <h3 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h3><ul>
