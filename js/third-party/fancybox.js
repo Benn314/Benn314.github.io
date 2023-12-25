@@ -12,7 +12,7 @@ document.addEventListener('page:loaded', () => {
     } else if ($image.is('.group-picture img')) {
       $imageWrapLink.attr('data-fancybox', 'group').attr('rel', 'group');
     } else {
-      $imageWrapLink.attr('data-fancybox', 'default').attr('rel', 'default');
+      $imageWrapLink.attr('data-fancybox', 'defaults').attr('rel', 'default');
     }
 
     const imageTitle = $image.attr('title') || $image.attr('alt');

@@ -179,7 +179,8 @@
 <p>选择适合你情况的解决方法，可以确保烟花效果能够按照预期立即出现，而不是有延迟。</p>
 <br>
 
-<h2 id="修改-motion-js-加快动画"><a href="#修改-motion-js-加快动画" class="headerlink" title="修改 motion.js 加快动画"></a>修改 motion.js 加快动画</h2><p>进入 motion.js，修改 duration 属性（默认是 duration=200 | 500，detalT 是 200）修改成 duration=100 和 detalT=10</p>
+<h2 id="修改-motion-js-加快动画"><a href="#修改-motion-js-加快动画" class="headerlink" title="修改 motion.js 加快动画"></a>修改 motion.js 加快动画</h2><p>进入 motion.js，修改 duration 属性（默认是 duratio</p>
+<p>n=200 | 500，detalT 是 200）修改成 duration=100 和 detalT=10</p>
 <ul>
 <li><a href="https://yxzi.xyz/posts/9570/">参考链接🔗</a></li>
 </ul>
