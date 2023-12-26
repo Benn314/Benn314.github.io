@@ -271,8 +271,8 @@
 <li>添加站点</li>
 <li>选择计划</li>
 <li>添加编辑 DNS 记录</li>
-<li>按照 Cloud Flare 平台提示，修改阿里云的 DNS 服务器为 Cloud Flare 平台所提供的 DNS 服务器（这里因为我买的是阿里云的域名）<img data-src="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/Pasted image 20231226142414.png" alt style="zoom: 75%;"></li>
-<li>等待一定时间之后就会收到激活成功的邮件啦~（CDN服务器更新需要时间，激活成功后请稍等片段再到 Cloud Flare 控制台查看分析数据，检验是否成功）<img data-src="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/image-20231226165338925.png" alt style="zoom: 40%;"></li>
+<li>按照 Cloud Flare 平台提示，修改阿里云的 DNS 服务器为 Cloud Flare 平台所提供的 DNS 服务器（这里因为我买的是阿里云的域名）<img data-src="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/cloudflare-cdn.png" alt style="zoom: 75%;"></li>
+<li>等待一定时间之后就会收到激活成功的邮件啦~（CDN服务器更新需要时间，激活成功后请稍等片段再到 Cloud Flare 控制台查看分析数据，检验是否成功）<img data-src="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/Successful-activation.png" alt style="zoom:40%;"></li>
 </ol>
 <ul>
 <li><a href="https://www.jun997.xyz/2022/05/18/62ef741104da.html#%E4%B8%89-%E5%9C%A8cloudflare%E5%B9%B3%E5%8F%B0%E4%B8%8A%E5%BC%80%E5%90%AFcdn%E6%9C%8D%E5%8A%A1">参考链接🔗</a></li>
