@@ -318,7 +318,7 @@
 
 <h2 id="hexo-asset-image-插件失效原因分析"><a href="#hexo-asset-image-插件失效原因分析" class="headerlink" title="hexo-asset-image 插件失效原因分析"></a>hexo-asset-image 插件失效原因分析</h2><p>一年前搭建了此博客，由于本地仓库图片相对路径与线上环境图片引用地址不符导致线上图片无法正常显示，同时写博客文章需要耗费较多时间来进行内容验证和排版，故而废弃了博客，今天重新给它捡回来。</p>
 <p>Hexo发布的文章被存放正在 <code>/source/_post</code> 中，这里我们以文章 <code>aaa</code> 为例，对应到线上环境的 url 地址变成了  <code>https://你的github用户名.github.io/year/month/day/aaa</code>，所以线上部署的图片如果想要正常显示，需要将其存放在该 url 地址的后面，因为最终被渲染后，是放在同一个文件夹下的，也就是 <code>https://你的github用户名.github.io/year/month/day/aaa/你的图片资源名</code> 但 Hexo 官方并没有对该情况做出合适的解决方案，只有一个原生方案是将你的静态资源放到 <code>public/image</code> 目录中进行统一管理，在部署阶段会将本地相对路径进行重定向，而这如果在博客文章日益累加的情况下，显然是不稳妥的方案，不仅不好管理，而且每次都需要将图片手动放入到该指定目录，并在文章中指定引用的方式，很不方便。我觉得应该借鉴类似 Typora 的文件资源管理：</p>
-<p><img data-src="/images/logo.svg" data-original="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/Typora%E5%9B%BE%E5%83%8F.png"></p>
+<p><img data-src="/images/loading.gif" data-original="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/Typora%E5%9B%BE%E5%83%8F.png"></p>
 <p>所以，Hexo 的社区便有人开发了解决此需求的第三方插件，<code>hexo-asset-image</code> 和 <code>hexo-asset-file</code></p>
 <p>呼声比较高的是 <code>hexo-asset-image</code>，但经过我的检验，<code>hexo-asset-image </code> 并不能解决我的需求，因为该插件与 <code>hexo-next-theme</code> 下的图片懒加载插件 <a target="_blank" rel="noopener" href="https://github.com/ApoorvSaxena/lozad.js">lozad.js</a> 冲突，这个插件会将 <code>img</code> 的 <code>src</code> 属性改为 <code>data-src</code>，而 hexo-asset-image 的工作原理是统一处理 <code>src</code> ，没有对 <code>data-src</code> 等属性的判断，所以便不会处理图片，我个人是希望能增加用户体验的，所以并不想放弃懒加载动画。想提个 PR 也已经发现原插件仓库已经被归档了。</p>
 <h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>后面采用 <a target="_blank" rel="noopener" href="https://github.com/hqweay/hexo-asset-image">hexo-asset-file</a> 插件进行替代</p>
@@ -409,7 +409,7 @@
 <br>
 
 <h2 id="新增-Short-时刻"><a href="#新增-Short-时刻" class="headerlink" title="新增 Short 时刻"></a>新增 Short 时刻</h2><p>本来想实现类似 <a target="_blank" rel="noopener" href="https://diygod.cc/">diygod.cc</a> 中类似 Short 记录心情时刻都功能，但在 Hexo 中实现貌似有点麻烦（需要开发新的 Layout）但目前空闲时间并不多，只能先列个 Todo 了，以后有时间再回来看看。</p>
-<p><img data-src="/images/logo.svg" data-original="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/Short.png"></p>
+<p><img data-src="/images/loading.gif" data-original="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/Short.png"></p>
 <p>Hexo 社区中有 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-index">hexo-generator-index</a> 和第三方的 <a target="_blank" rel="noopener" href="https://github.com/Jamling/hexo-generator-index2/tree/master">hexo-generator-index2</a> ，本来的想法是拷贝一个首页并加上过滤器只包含 Short 相关的文章，但目前不知道如何 copy 首页🤣 目前的 Short 为 categories 和 tags 的子路由，只相当于在右侧菜单栏配备了路由，样式还是基于 categories 或 tags 的样式（仅包含文字），但这显然不是我想要的</p>
 <p>我希望 Short 应包含：</p>
 <ul>
@@ -451,13 +451,13 @@
 <br>
 
 <h2 id="腾讯云对象存储文件链接"><a href="#腾讯云对象存储文件链接" class="headerlink" title="腾讯云对象存储文件链接"></a>腾讯云对象存储文件链接</h2><p>如果直接在文件列表中 copy 文件链接的，是有效期为一小时的临时链接，我们需要进入文件详情 copy 永久链接才不会太闹心（安全隐患现在不是我们的优先考虑项，让图片长时间的正常预览显示才是）</p>
-<p><img data-src="/images/logo.svg" data-original="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/%E8%85%BE%E8%AE%AF%E4%BA%91-%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8-%E6%96%87%E4%BB%B6%E5%88%97%E8%A1%A8.png"></p>
-<p><img data-src="/images/logo.svg" data-original="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/%E8%85%BE%E8%AE%AF%E4%BA%91-%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8-%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5.png"></p>
+<p><img data-src="/images/loading.gif" data-original="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/%E8%85%BE%E8%AE%AF%E4%BA%91-%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8-%E6%96%87%E4%BB%B6%E5%88%97%E8%A1%A8.png"></p>
+<p><img data-src="/images/loading.gif" data-original="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/%E8%85%BE%E8%AE%AF%E4%BA%91-%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8-%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5.png"></p>
 <br>
 
 <h2 id="Motion-Loading"><a href="#Motion-Loading" class="headerlink" title="Motion Loading"></a>Motion Loading</h2><p>关于全局的 Motion 动画，有一点想说的</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next/issues/669">如何实现页面加载中的过渡动画 · Issue #669 · iissnan/hexo-theme-next · GitHub</a><img data-src="/images/logo.svg" data-original="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/motion.png"></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next/issues/669">如何实现页面加载中的过渡动画 · Issue #669 · iissnan/hexo-theme-next · GitHub</a><img data-src="/images/loading.gif" data-original="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/motion.png"></li>
 </ul>
 <p>Hexo-next 的 （pace属性）页面加载动画可选项不多，后面看腻了就给关了，并把 motion 动画设置为 async，在加载速度和美化之间做了一个平衡，Hexo 如果将 motion 设置为 false，加载效率会大大提升（纯静态，无后台数据交互）</p>
 <br>
