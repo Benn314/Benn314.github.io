@@ -186,6 +186,31 @@
 </ul>
 <br>
 
+<h2 id="使用-Cloud-Flare’s-CDN-加速-Github-Pages-的访问速度"><a href="#使用-Cloud-Flare’s-CDN-加速-Github-Pages-的访问速度" class="headerlink" title="使用 Cloud Flare’s CDN 加速 Github Pages 的访问速度"></a>使用 Cloud Flare’s CDN 加速 Github Pages 的访问速度</h2><blockquote>
+<p>相比于 又拍云，Cloud Flare 的优点是不要求域名备案，免费方案也足够使用</p>
+</blockquote>
+<p>操作步骤：</p>
+<ol>
+<li>注册 Cloud Flare 账号</li>
+<li>添加站点</li>
+<li>选择计划</li>
+<li>添加编辑 DNS 记录</li>
+<li>按照 Cloud Flare 平台提示，修改阿里云的 DNS 服务器为 Cloud Flare 平台所提供的 DNS 服务器（这里因为我买的是阿里云的域名）<img data-src="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/Pasted image 20231226142414.png" alt style="zoom: 75%;"></li>
+<li>等待一定时间之后就会收到激活成功的邮件啦~（CDN服务器更新需要时间，激活成功后请稍等片段再到 Cloud Flare 控制台查看分析数据，检验是否成功）<img data-src="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/image-20231226165338925.png" alt style="zoom: 40%;"></li>
+</ol>
+<ul>
+<li><a href="https://www.jun997.xyz/2022/05/18/62ef741104da.html#%E4%B8%89-%E5%9C%A8cloudflare%E5%B9%B3%E5%8F%B0%E4%B8%8A%E5%BC%80%E5%90%AFcdn%E6%9C%8D%E5%8A%A1">参考链接🔗</a></li>
+</ul>
+<br>
+
+<h2 id="hexo-lazyload-image"><a href="#hexo-lazyload-image" class="headerlink" title="hexo-lazyload-image"></a><a href="https://github.com/Troy-Yang/hexo-lazyload-image">hexo-lazyload-image</a></h2><p>一款 Hexo 图片懒加载插件，仅需更改站点配置文件即可（先关闭 Hexo-next 自带的 lazyload）</p>
+<p>该插件满足我快速更改自定义 loading .gif 的需求，但是性能速度被拉低，在通过 Cloud Flare CDN 加速网站后，仅通过 Hexo 官方使用的 load 插件已经基本满足图片懒加载的等待需求了，不太需要加载动画来优化用户体验</p>
+<p>同时该插件还存在 bug，文章的第一张图片和最后一张图片有时候会不更换占位图片，这个 bug 有待修改，使用该插件后我觉得我的网页图片加载体验是降低了的</p>
+<ul>
+<li><input disabled type="checkbox"> 只需要纯粹的图片占位符即可</li>
+</ul>
+<br>
+
 <h3 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h3><ul>
 <li>即使你删除了 blog 中的 .deploy_git，通过 <code>hexo d</code> 部署还是能自动生成回来的</li>
 <li>博客线上环境完成部署大概有 2 分钟的滞后性，期间存在部分部署持续推进</li>
