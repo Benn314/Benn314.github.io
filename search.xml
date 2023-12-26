@@ -293,6 +293,7 @@
 <li><a href="https://guiblogs.com/hexo30-15/">移除 Hexo 文章點擊「閱讀全文」後網址出現的 #more _</a></li>
 <li>Typora中的制表符实行 <code>&lt;br /&gt;</code> 目前已知的只对 Github 生效，Hexo 无效</li>
 <li>删除：Aplayer(插件)、fork me on github(样式)、darkmode(插件)、clicklove(样式)、pace(lazyload)、<u>motion(优化，补充：motion中的fadeIn设置了下移的样式，有时间看看如何优化)</u>、其他优化更新都记录在此文章中了 – 2023年12月25日</li>
+<li>Hexo 的 markdown todo 样式渲染有误</li>
 </ul>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
 <li><a href="https://nopoetry.github.io/2020/08/03/Hexo%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/">Hexo博客插入图片的方法</a></li>
