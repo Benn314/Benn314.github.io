@@ -6,7 +6,8 @@
     <content><![CDATA[<hr>
 <span id="more"></span>
 
-<p>这两天在倒腾一年前基于 Hexo 搭建的静态网站（<s>有点</s>算逃避现实吧），修改并优化了很多东西，初步满足自己对于个人博客的需求了。在这一年里，主要是学习前端的知识（学习时间：2022.07.26-2023.09.22，于 2023.06 找到了自己的第一份前端实习）见识到了很多有趣的博客和灵魂，自己也搭建了另一个博客送给了好朋友（<a href="https://camille.plus/">前往博客</a>（这是一个基于 astro2.0 博客框架搭建的）），期间也想过要不要更换新的博客框架，但 Hexo-next 主题我确实还是蛮喜欢的，之前第一次见 Hexo-next 博客是大二学期的时候，那时 Hexo-next 搭建的博客真的给我惊艳到了，当时连博客框架是什么都不知道哈哈哈~后面联系了站主了解到了 Hexo（也弃坑了，确实长期坚持写博客是一件很不容易但很有意义的事），直到后来下一学期才了解到 Hexo 其实分为了很多主题，之前喜欢的主题叫 next，我搭建博客的初心也是从这里开始的，不过在此之前我曾用 Docsify 搭建过个人文档（之前不了解 Docsify 是生成文档类的静态网址哈哈哈哈）</p>
+
+<p>这两天在倒腾一年前基于 Hexo 搭建的静态网站（<s>有点</s>算逃避现实吧），修改并优化了很多东西，初步满足自己对于个人博客的需求了。在这一年里，主要是学习前端的知识（学习时间：2022.07.26-2023.09.22，于 2023.06 找到了自己的第一份前端实习）见识到了很多有趣的博客和灵魂，自己也搭建了另一个博客送给了好朋友（<a href="https://camille.plus/">前往博客</a>（这是一个基于 astro2.0 博客框架搭建的）），期间也想过要不要更换新的博客框架，但 Hexo-next 主题我确实还是蛮喜欢的，之前第一次见 Hexo-next 博客是大二学期的时候，那时 Hexo-next 搭建的博客真的给我惊艳到了，当时连博客框架是什么都不知道哈哈哈~ 后面联系了站主了解到了 Hexo（也弃坑了，确实长期坚持写博客是一件很不容易但很有意义的事），直到后来下一学期才了解到 Hexo 其实分为了很多主题，之前喜欢的主题叫 next，我搭建博客的初心也是从这里开始的，不过在此之前我曾用 Docsify 搭建过博客文档（之前不了解 Docsify 是生成文档类的静态博客框架哈哈哈哈~）</p>
 <p>轻量化的博客框架现在市面上有很多，有基于区块链技术搭建的、基于 Obsidian 文档流搭建的个人仓库类博客，也有专注于内容的极简风格博客主题（hexo-theme-cards）等等，或许等以后有了新的需求，会体验或迁移到新的博客框架。接下来的一年主要还是以当前的 Hexo-next 主题为主，博客搭建到这就告一段落了~（具体日志见：<a href="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3">Hexo客制化及Bug解决</a>）</p>
 <p>接下来对于博客文章初步的决定是记录《数据结构与算法》相关的知识点 &amp; …….</p>
 <blockquote>
@@ -309,17 +310,29 @@
 <br>
 
 <h2 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h2><ul>
-<li>即使你删除了 blog 中的 .deploy_git，通过 <code>hexo d</code> 部署还是能自动生成回来的</li>
-<li>博客线上环境完成部署大概有 2 分钟的滞后性，期间存在部分部署持续推进</li>
-<li><a href="https://guiblogs.com/hexo30-15/">移除 Hexo 文章點擊「閱讀全文」後網址出現的 #more _</a></li>
-<li>Typora中的制表符实行 <code>&lt;br /&gt;</code> 目前已知的只对 Github 生效，Hexo 无效</li>
-<li>删除：Aplayer(插件)、fork me on github(样式)、darkmode(插件)、clicklove(样式)、pace(lazyload)、<u>motion(优化，补充：motion中的fadeIn设置了下移的样式，有时间看看如何优化)</u>、其他优化更新都记录在此文章中了 – 2023年12月25日</li>
-<li>Hexo 的 markdown todo 样式渲染有误</li>
-<li>2023.12.28 17:55 Hexo-next 上传自定义 html 文件的问题：Waline 和 Live-2D 属于全局配置应用，上传到博客的 html 自定义文件会出现二者，需要在配置项中进行关闭或者更改（或创建新的）布局文件设置不显示二者（目前暂时无关闭二者的实际操作方案，同时 html 文件形式无法如同 md 文件一样，设置 Front-matter 关闭 waline）<ul>
+<li><p>即使你删除了 blog 中的 .deploy_git，通过 <code>hexo d</code> 部署还是能自动生成回来的</p>
+</li>
+<li><p>博客线上环境完成部署大概有 2 分钟的滞后性，期间存在部分部署持续推进</p>
+</li>
+<li><p><a href="https://guiblogs.com/hexo30-15/">移除 Hexo 文章點擊「閱讀全文」後網址出現的 #more _</a></p>
+</li>
+<li><p>Typora中的制表符实行 <code>&lt;br /&gt;</code> 目前已知的只对 Github 生效，Hexo 无效</p>
+</li>
+<li><p>删除：Aplayer(插件)、fork me on github(样式)、darkmode(插件)、clicklove(样式)、pace(lazyload)、<u>motion(优化，补充：motion中的fadeIn设置了下移的样式，有时间看看如何优化)</u>、其他优化更新都记录在此文章中了 – 2023.12.25</p>
+</li>
+<li><p>markdown <del>删除线</del> 语法：<code>~~删除线~~</code></p>
+<ul>
+<li>hexo 对删除线的触发较简易，只需像这样：<code>~内容~</code> 即可触发，不过 <code>~</code> 和内容之间不能有空格，否则触发失败（个人认为其实没必要做简易触发的，遵循 markdown 语法就好）</li>
+</ul>
+</li>
+<li><p>2023.12.28 17:55 Hexo-next 上传自定义 html 文件的问题：Waline 和 Live-2D 属于全局配置应用，上传到博客的 html 自定义文件会出现二者，需要在配置项中进行关闭或者更改（或创建新的）布局文件设置不显示二者（目前暂时无关闭二者的实际操作方案，同时 html 文件形式无法如同 md 文件一样，设置 Front-matter 关闭 waline）</p>
+<ul>
 <li><a href="https://imszz.com/p/6ea05e36/">参考链接1🔗</a></li>
 <li><a href="https://qianfanguojin.top/2019/07/23/Hexo%E5%8D%9A%E5%AE%A2%E8%BF%9B%E9%98%B6%EF%BC%9A%E4%B8%BANext%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0Valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/#4-1-%E6%8C%87%E5%AE%9A%E6%96%87%E7%AB%A0%EF%BC%88%E9%A1%B5%E9%9D%A2%EF%BC%89%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%E6%98%AF%E5%90%A6%E5%BC%80%E5%90%AF">参考链接2🔗</a></li>
 <li>小结：我们可以在 front matter 中使用 comment: false 来设置在指定页面中关闭 waline 评价系统（关闭了 waline 评价系统后，顺带优化了一点点加载速度，可以）</li>
 </ul>
+</li>
+<li><p>Typora 的一点问题：在 Hexo post 文章的 front matter 后紧接着写正文内容会导致光标位置移动到 front matter 中去（Bug，暂时无解，需要先空一行在书写，之后编辑完再排版回去）</p>
 </li>
 </ul>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
