@@ -294,6 +294,12 @@
 <li>Typora中的制表符实行 <code>&lt;br /&gt;</code> 目前已知的只对 Github 生效，Hexo 无效</li>
 <li>删除：Aplayer(插件)、fork me on github(样式)、darkmode(插件)、clicklove(样式)、pace(lazyload)、<u>motion(优化，补充：motion中的fadeIn设置了下移的样式，有时间看看如何优化)</u>、其他优化更新都记录在此文章中了 – 2023年12月25日</li>
 <li>Hexo 的 markdown todo 样式渲染有误</li>
+<li>2023.12.28 17:55 Hexo-next 上传自定义 html 文件的问题：Waline 和 live2d 模型不知道如何关闭（其一：因为 html 文件形式无法设置 Front-matter 关闭 wanline）<ul>
+<li><a href="https://imszz.com/p/6ea05e36/">参考链接1🔗</a></li>
+<li><a href="https://qianfanguojin.top/2019/07/23/Hexo%E5%8D%9A%E5%AE%A2%E8%BF%9B%E9%98%B6%EF%BC%9A%E4%B8%BANext%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0Valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/#4-1-%E6%8C%87%E5%AE%9A%E6%96%87%E7%AB%A0%EF%BC%88%E9%A1%B5%E9%9D%A2%EF%BC%89%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%E6%98%AF%E5%90%A6%E5%BC%80%E5%90%AF">参考链接2🔗</a></li>
+<li>小结：我们可以在 front matter 中使用 comment: false 来设置 waline 评价系统在指定页面关闭</li>
+</ul>
+</li>
 </ul>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
 <li><a href="https://nopoetry.github.io/2020/08/03/Hexo%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/">Hexo博客插入图片的方法</a></li>

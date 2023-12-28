@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://benn314.github.io/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/cloudflare-cdn.png">
 <meta property="og:image" content="https://benn314.github.io/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/Successful-activation.png">
 <meta property="article:published_time" content="2023-12-13T09:35:29.000Z">
-<meta property="article:modified_time" content="2023-12-26T09:13:35.775Z">
+<meta property="article:modified_time" content="2023-12-28T10:04:01.637Z">
 <meta property="article:author" content="Ben">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="前端性能优化">
@@ -101,7 +101,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-short"><a href="/tags/Short" rel="section"><i class="fa fa-camera fa-fw"></i>Short</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -255,7 +255,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-26 17:13:35" itemprop="dateModified" datetime="2023-12-26T17:13:35+08:00">2023-12-26</time>
+      <time title="修改时间：2023-12-28 18:04:01" itemprop="dateModified" datetime="2023-12-28T18:04:01+08:00">2023-12-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -295,7 +295,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>4.6k</span>
+      <span>4.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -528,6 +528,12 @@
 <li>Typora中的制表符实行 <code>&lt;br /&gt;</code> 目前已知的只对 Github 生效，Hexo 无效</li>
 <li>删除：Aplayer(插件)、fork me on github(样式)、darkmode(插件)、clicklove(样式)、pace(lazyload)、<u>motion(优化，补充：motion中的fadeIn设置了下移的样式，有时间看看如何优化)</u>、其他优化更新都记录在此文章中了 – 2023年12月25日</li>
 <li>Hexo 的 markdown todo 样式渲染有误</li>
+<li>2023.12.28 17:55 Hexo-next 上传自定义 html 文件的问题：Waline 和 live2d 模型不知道如何关闭（其一：因为 html 文件形式无法设置 Front-matter 关闭 wanline）<ul>
+<li><a target="_blank" rel="noopener" href="https://imszz.com/p/6ea05e36/">参考链接1🔗</a></li>
+<li><a target="_blank" rel="noopener" href="https://qianfanguojin.top/2019/07/23/Hexo%E5%8D%9A%E5%AE%A2%E8%BF%9B%E9%98%B6%EF%BC%9A%E4%B8%BANext%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0Valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/#4-1-%E6%8C%87%E5%AE%9A%E6%96%87%E7%AB%A0%EF%BC%88%E9%A1%B5%E9%9D%A2%EF%BC%89%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%E6%98%AF%E5%90%A6%E5%BC%80%E5%90%AF">参考链接2🔗</a></li>
+<li>小结：我们可以在 front matter 中使用 comment: false 来设置 waline 评价系统在指定页面关闭</li>
+</ul>
+</li>
 </ul>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://nopoetry.github.io/2020/08/03/Hexo%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/">Hexo博客插入图片的方法</a></li>
