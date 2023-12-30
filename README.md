@@ -34,6 +34,9 @@
 - [x] Hexo 图片圆角样式修改
 - [x] Waline评论系统样式优化
 - [x] 移除 post 页面的光标样式和点击样式
+- [ ] 通过SEO搜索发现，博客目前没有被谷歌和百度站点收录，需要去注册申请上传站点
+- [ ] 修改 a标签的文字颜色（正常和hover都修改），区分正文颜色内容（style.styl）
+- [ ] 自定义个人博客主页（[参考链接🔗](https://codepen.io/jcoulterdesign/pen/MwVbjY)）
 
 ---
 
