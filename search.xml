@@ -1,6 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>随便聊聊</title>
+    <url>/2023/12/26/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%91%8A%E4%B8%80%E6%AE%B5%E8%90%BD/</url>
+    <content><![CDATA[<hr>
+<span id="more"></span>
+
+
+<p>这两天在倒腾一年前基于 Hexo 搭建的静态网站（<s>有点</s>算逃避现实吧），修改并优化了很多东西，初步满足自己对于个人博客的需求了。在这一年里，主要是学习前端的知识（学习时间：2022.07.26-2023.09.22，于 2023.06 找到了自己的第一份前端实习）见识到了很多有趣的博客和灵魂，自己也搭建了另一个博客送给了好朋友（<a href="https://camille.plus/">前往博客</a>（这是一个基于 astro2.0 博客框架搭建的）），期间也想过要不要更换新的博客框架，但 Hexo-next 主题我确实还是蛮喜欢的，之前第一次见 Hexo-next 博客是大二学期的时候，那时 Hexo-next 搭建的博客真的给我惊艳到了，当时连博客框架是什么都不知道哈哈哈~ 后面联系了站主了解到了 Hexo（也弃坑了，确实长期坚持写博客是一件很不容易但很有意义的事），直到后来下一学期才了解到 Hexo 其实分为了很多主题，之前喜欢的主题叫 next，我搭建博客的初心也是从这里开始的，不过在此之前我曾用 Docsify 搭建过博客文档（之前不了解 Docsify 是生成文档类的静态博客框架哈哈哈哈~）</p>
+<p>轻量化的博客框架现在市面上有很多，有基于区块链技术搭建的、基于 Obsidian 文档流搭建的个人仓库类博客，也有专注于内容的极简风格博客主题（hexo-theme-cards）等等，或许等以后有了新的需求，会体验或迁移到新的博客框架。接下来的一年主要还是以当前的 Hexo-next 主题为主，博客搭建到这就告一段落了~（具体日志见：<a href="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3">Hexo客制化及Bug解决</a>）</p>
+<p>接下来对于博客文章初步的决定是记录《数据结构与算法》相关的知识点 &amp; …….</p>
+<blockquote>
+<p>收收心，准备学习了~</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Short</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Short</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>重拾 C++</title>
+    <url>/2022/12/13/%E9%87%8D%E6%8B%BEC++/</url>
+    <content><![CDATA[<hr>
+<p>参加蓝桥杯和天梯杯比赛时，使用 C++ 刷题的一些随笔</p>
+<span id="more"></span>
+
+<p><a href="https://www.liuchuo.net/archives/6565">如何在Dev-Cpp中使用C++11中的函数：stoi、to_string、unordered_map、unordered_set、auto</a></p>
+<h2 id="算法常用API："><a href="#算法常用API：" class="headerlink" title="算法常用API："></a>算法常用API：</h2><p>stoi</p>
+<p>to_string <em>用于 int to string</em></p>
+<p>unordered_map</p>
+<p>unordered_set</p>
+<p>auto</p>
+<blockquote>
+<p>vector打印的字符会变成ASCII值</p>
+</blockquote>
+<h2 id="VS-2022-快捷键"><a href="#VS-2022-快捷键" class="headerlink" title="VS 2022 快捷键"></a>VS 2022 快捷键</h2><ul>
+<li><strong>Ctrl+D</strong>：快速复制当前行到下一行</li>
+<li><strong>Alt + ↑/↓</strong>：移动当前行</li>
+<li><strong>Ctrl+K+C</strong>：注释</li>
+<li><strong>Ctrl+K+U</strong>：取消注释</li>
+</ul>
+<h2 id="printVector"><a href="#printVector" class="headerlink" title="printVector"></a>printVector</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">printVector</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; v)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (vector&lt;<span class="type">int</span>&gt;::iterator it = v.<span class="built_in">begin</span>(); it != v.<span class="built_in">end</span>(); it++) &#123;</span><br><span class="line">		cout &lt;&lt; *it &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//插入</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test01</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; v1;</span><br><span class="line">	<span class="comment">//尾插</span></span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="number">10</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="number">20</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="number">30</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="number">40</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="number">50</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="string">&#x27;I&#x27;</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="string">&#x27;II&#x27;</span>);</span><br><span class="line">	<span class="built_in">printVector</span>(v1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">test01</span>(); <span class="comment">// 10 20 30 40 50 97 73 18761</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="getline-cin-str"><a href="#getline-cin-str" class="headerlink" title="getline(cin,str)"></a>getline(cin,str)</h2><p>使用getline(cin,str) 获取单变量的输入字符，范围是一行（即忽视空格），该函数需要引入头文件#include <code>&lt;string&gt;</code></p>
+<p>‘\0’ 在c++中也是NULL的意思，即回车后，获取的字符就是‘\0’ ,也就是‘NULL’ 常用于条件判断</p>
+<p>天梯比赛中：一次输入便一次输出是可以的，不是说要等到全部输入完成才进行输出</p>
+<p>很巧妙的一个比赛技巧</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; c; i++) &#123;</span><br><span class="line">    cin &gt;&gt; str;</span><br><span class="line">    <span class="keyword">if</span> (s.<span class="built_in">find</span>(str) == s.<span class="built_in">end</span>() &amp;&amp; ans.<span class="built_in">find</span>(str) == ans.<span class="built_in">end</span>()) &#123;</span><br><span class="line">        ans.<span class="built_in">insert</span>(str);</span><br><span class="line">        <span class="keyword">if</span> (flag == <span class="number">1</span>)</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        cout &lt;&lt; str;</span><br><span class="line">        flag = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>设置flag来控制 “ “ 达到末尾没有空格的目的</p>
+<p>set<strong>不允许</strong>容器中有<strong>重复</strong>的元素</p>
+<h2 id="存放元素"><a href="#存放元素" class="headerlink" title="存放元素"></a>存放元素</h2><p>set主用 <code>insert()</code>，vector主用 <code>push_back()</code></p>
+<h2 id="set-find"><a href="#set-find" class="headerlink" title="set-find()"></a>set-find()</h2><p><code>find(key);</code>  // 查找key是否存在,若存在，返回该键的元素的迭代器；若不存在，返回set.end();</p>
+<blockquote>
+<p>查找   —  find    （返回的是迭代器）</p>
+</blockquote>
+<h2 id="字符串大小写转换-cpp"><a href="#字符串大小写转换-cpp" class="headerlink" title="字符串大小写转换.cpp"></a>字符串大小写转换.cpp</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 转化方法2：利用 toupper() 和 tolower() 函数</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ConversionofLetterTwo</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">char</span> ch;</span><br><span class="line">	cin &gt;&gt; ch;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (ch &gt;= <span class="string">&#x27;a&#x27;</span> &amp;&amp; ch &lt;= <span class="string">&#x27;z&#x27;</span>)</span><br><span class="line">		ch = <span class="built_in">toupper</span>(ch);</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (ch &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; ch &lt;= <span class="string">&#x27;Z&#x27;</span>)</span><br><span class="line">		ch = <span class="built_in">tolower</span>(ch);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;Invaild Word\n&quot;</span> &lt;&lt; endl;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; ch &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">ConversionofLetterTwo</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a>字符串反转</h2><p>使用 <code>algorithm</code> 中的 <code>reverse</code> 函数</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span>  </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span>  </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span>  </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;  </span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">    string s = <span class="string">&quot;hello&quot;</span>;  </span><br><span class="line">  </span><br><span class="line">    <span class="built_in">reverse</span>(s.<span class="built_in">begin</span>(),s.<span class="built_in">end</span>());  </span><br><span class="line">  </span><br><span class="line">    cout&lt;&lt;s&lt;&lt;endl;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+
+<p>vector容器也适用，也是写成 <code>reverse(s.begin(),s.end()); </code></p>
+<p><strong>不定长数组用 vector</strong></p>
+<h2 id="vector是不定长数组，能用-访问元素"><a href="#vector是不定长数组，能用-访问元素" class="headerlink" title="vector是不定长数组，能用[]访问元素"></a>vector是不定长数组，能用[]访问元素</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 检测vector能否用[]访问元素</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; v1; <span class="comment">//无参构造</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		v1.<span class="built_in">push_back</span>(i);</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; v1[<span class="number">0</span>] &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; v1[<span class="number">1</span>] &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; v1[<span class="number">9</span>];</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>结论：可以，插入进去就是数组，而且是不定长数组，可以通过[]访问数组元素</p>
+</blockquote>
+<p>长度：数组用length()，容器用size()</p>
+<p>用临时数组来进行条件判断很好用 不要总想着在目的数组上进行数组改动 可以通过临时数组的改动 最后赋值给目的数组</p>
+<p>string库函数，<code>append()</code> 用于在字符串后面进行追加字符串操作</p>
+<h2 id="字符串的替换replace"><a href="#字符串的替换replace" class="headerlink" title="字符串的替换replace()"></a>字符串的替换replace()</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 字符串替换</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test02</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//替换</span></span><br><span class="line">	string str1 = <span class="string">&quot;abcdefgde&quot;</span>;</span><br><span class="line">	str1.<span class="built_in">replace</span>(<span class="number">4</span>, <span class="number">3</span>, <span class="string">&quot;1111&quot;</span>);</span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;str1 = &quot;</span> &lt;&lt; str1 &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">test02</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="【问题】cin-getline-混合使用时不能输入-直接执行下一行"><a href="#【问题】cin-getline-混合使用时不能输入-直接执行下一行" class="headerlink" title="【问题】cin getline 混合使用时不能输入 直接执行下一行"></a>【问题】cin getline 混合使用时不能输入 直接执行下一行</h2><p>经常会遇到一个问题，就是需要混合使用cin&gt;&gt;, cin.getline(), getline()时，有时会碰到不等你输入，就直接运行下一行的情况</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">	<span class="type">int</span> N;</span><br><span class="line">	string c;</span><br><span class="line">	cin &gt;&gt; N;</span><br><span class="line">	cin &gt;&gt; c;</span><br><span class="line"></span><br><span class="line">	string s;</span><br><span class="line">	<span class="built_in">getline</span>(cin, s);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果是因为缓冲区还剩一个回车符 直接赋给了getline() 然后就输入执行结束 实际上getline的字符你还没有输入 所以看到这种情况懵了</p>
+<blockquote>
+<p>先cin&gt;&gt;，再getline()的情况，是因为cin&gt;&gt;会在缓冲区中多出一个回车符，即你输入完之后，敲完回车符之后，cin&gt;&gt;会在缓冲区中再多保留一个回车符，这个多出来的回车符就导致下面getline()执行时，自动读取缓冲区内的回车符，于是这句getline()就相当于你什么都没有敲就执行完了，自然就会去执行下面的语句了。</p>
+<p>这种情况的解决方法很简单，在cin&gt;&gt;后面加一句cin.get()就行了，这个cin.get()就会将缓冲区内多出来的回车符消耗掉，于是后面的输入就正常了</p>
+</blockquote>
+<p>修改过后的代码</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> N;</span><br><span class="line">	string c;</span><br><span class="line">	cin &gt;&gt; N;</span><br><span class="line">	cin &gt;&gt; c;</span><br><span class="line">	cin.<span class="built_in">get</span>(); <span class="comment">// 用 getchar();也行</span></span><br><span class="line">	<span class="comment">//getchar(); //如果是char c的话</span></span><br><span class="line">	string s;</span><br><span class="line">	<span class="built_in">getline</span>(cin, s);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="sort-Algorithm"><a href="#sort-Algorithm" class="headerlink" title="sort() - Algorithm"></a>sort() - Algorithm</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//方法一：定义比较函数（最常用）</span></span><br><span class="line"><span class="comment">//情况一：数组排列</span></span><br><span class="line"><span class="type">int</span> A[<span class="number">100</span>];</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp1</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span><span class="comment">//int为数组数据类型</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> a&gt;b;<span class="comment">//降序排列</span></span><br><span class="line"><span class="comment">//return a&lt;b;//默认的升序排列</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">sort</span>(A,A+<span class="number">100</span>,cmp1);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 参考文章：https://www.cnblogs.com/stones-dream/p/10183210.html</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="常犯的一个错误：段错误"><a href="#常犯的一个错误：段错误" class="headerlink" title="常犯的一个错误：段错误"></a>常犯的一个错误：段错误</h2><p>经常原因：for循环从最大长度到0 经常只改了第一条件，第三条件 i++ 总是忘记改成 i–</p>
+]]></content>
+      <categories>
+        <category>C/C++</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo 客制化及 Bug 解决</title>
     <url>/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/</url>
     <content><![CDATA[<hr>
@@ -249,104 +347,6 @@
       <tags>
         <tag>Hexo</tag>
         <tag>前端性能优化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>随便聊聊</title>
-    <url>/2023/12/26/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%91%8A%E4%B8%80%E6%AE%B5%E8%90%BD/</url>
-    <content><![CDATA[<hr>
-<span id="more"></span>
-
-
-<p>这两天在倒腾一年前基于 Hexo 搭建的静态网站（<s>有点</s>算逃避现实吧），修改并优化了很多东西，初步满足自己对于个人博客的需求了。在这一年里，主要是学习前端的知识（学习时间：2022.07.26-2023.09.22，于 2023.06 找到了自己的第一份前端实习）见识到了很多有趣的博客和灵魂，自己也搭建了另一个博客送给了好朋友（<a href="https://camille.plus/">前往博客</a>（这是一个基于 astro2.0 博客框架搭建的）），期间也想过要不要更换新的博客框架，但 Hexo-next 主题我确实还是蛮喜欢的，之前第一次见 Hexo-next 博客是大二学期的时候，那时 Hexo-next 搭建的博客真的给我惊艳到了，当时连博客框架是什么都不知道哈哈哈~ 后面联系了站主了解到了 Hexo（也弃坑了，确实长期坚持写博客是一件很不容易但很有意义的事），直到后来下一学期才了解到 Hexo 其实分为了很多主题，之前喜欢的主题叫 next，我搭建博客的初心也是从这里开始的，不过在此之前我曾用 Docsify 搭建过博客文档（之前不了解 Docsify 是生成文档类的静态博客框架哈哈哈哈~）</p>
-<p>轻量化的博客框架现在市面上有很多，有基于区块链技术搭建的、基于 Obsidian 文档流搭建的个人仓库类博客，也有专注于内容的极简风格博客主题（hexo-theme-cards）等等，或许等以后有了新的需求，会体验或迁移到新的博客框架。接下来的一年主要还是以当前的 Hexo-next 主题为主，博客搭建到这就告一段落了~（具体日志见：<a href="/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3">Hexo客制化及Bug解决</a>）</p>
-<p>接下来对于博客文章初步的决定是记录《数据结构与算法》相关的知识点 &amp; …….</p>
-<blockquote>
-<p>收收心，准备学习了~</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Short</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Short</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>重拾 C++</title>
-    <url>/2022/12/13/%E9%87%8D%E6%8B%BEC++/</url>
-    <content><![CDATA[<hr>
-<p>参加蓝桥杯和天梯杯比赛时，使用 C++ 刷题的一些随笔</p>
-<span id="more"></span>
-
-<p><a href="https://www.liuchuo.net/archives/6565">如何在Dev-Cpp中使用C++11中的函数：stoi、to_string、unordered_map、unordered_set、auto</a></p>
-<h2 id="算法常用API："><a href="#算法常用API：" class="headerlink" title="算法常用API："></a>算法常用API：</h2><p>stoi</p>
-<p>to_string <em>用于 int to string</em></p>
-<p>unordered_map</p>
-<p>unordered_set</p>
-<p>auto</p>
-<blockquote>
-<p>vector打印的字符会变成ASCII值</p>
-</blockquote>
-<h2 id="VS-2022-快捷键"><a href="#VS-2022-快捷键" class="headerlink" title="VS 2022 快捷键"></a>VS 2022 快捷键</h2><ul>
-<li><strong>Ctrl+D</strong>：快速复制当前行到下一行</li>
-<li><strong>Alt + ↑/↓</strong>：移动当前行</li>
-<li><strong>Ctrl+K+C</strong>：注释</li>
-<li><strong>Ctrl+K+U</strong>：取消注释</li>
-</ul>
-<h2 id="printVector"><a href="#printVector" class="headerlink" title="printVector"></a>printVector</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">printVector</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; v)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (vector&lt;<span class="type">int</span>&gt;::iterator it = v.<span class="built_in">begin</span>(); it != v.<span class="built_in">end</span>(); it++) &#123;</span><br><span class="line">		cout &lt;&lt; *it &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//插入</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test01</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; v1;</span><br><span class="line">	<span class="comment">//尾插</span></span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="number">10</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="number">20</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="number">30</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="number">40</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="number">50</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="string">&#x27;I&#x27;</span>);</span><br><span class="line">	v1.<span class="built_in">push_back</span>(<span class="string">&#x27;II&#x27;</span>);</span><br><span class="line">	<span class="built_in">printVector</span>(v1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">test01</span>(); <span class="comment">// 10 20 30 40 50 97 73 18761</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="getline-cin-str"><a href="#getline-cin-str" class="headerlink" title="getline(cin,str)"></a>getline(cin,str)</h2><p>使用getline(cin,str) 获取单变量的输入字符，范围是一行（即忽视空格），该函数需要引入头文件#include <code>&lt;string&gt;</code></p>
-<p>‘\0’ 在c++中也是NULL的意思，即回车后，获取的字符就是‘\0’ ,也就是‘NULL’ 常用于条件判断</p>
-<p>天梯比赛中：一次输入便一次输出是可以的，不是说要等到全部输入完成才进行输出</p>
-<p>很巧妙的一个比赛技巧</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; c; i++) &#123;</span><br><span class="line">    cin &gt;&gt; str;</span><br><span class="line">    <span class="keyword">if</span> (s.<span class="built_in">find</span>(str) == s.<span class="built_in">end</span>() &amp;&amp; ans.<span class="built_in">find</span>(str) == ans.<span class="built_in">end</span>()) &#123;</span><br><span class="line">        ans.<span class="built_in">insert</span>(str);</span><br><span class="line">        <span class="keyword">if</span> (flag == <span class="number">1</span>)</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        cout &lt;&lt; str;</span><br><span class="line">        flag = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>设置flag来控制 “ “ 达到末尾没有空格的目的</p>
-<p>set<strong>不允许</strong>容器中有<strong>重复</strong>的元素</p>
-<h2 id="存放元素"><a href="#存放元素" class="headerlink" title="存放元素"></a>存放元素</h2><p>set主用 <code>insert()</code>，vector主用 <code>push_back()</code></p>
-<h2 id="set-find"><a href="#set-find" class="headerlink" title="set-find()"></a>set-find()</h2><p><code>find(key);</code>  // 查找key是否存在,若存在，返回该键的元素的迭代器；若不存在，返回set.end();</p>
-<blockquote>
-<p>查找   —  find    （返回的是迭代器）</p>
-</blockquote>
-<h2 id="字符串大小写转换-cpp"><a href="#字符串大小写转换-cpp" class="headerlink" title="字符串大小写转换.cpp"></a>字符串大小写转换.cpp</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 转化方法2：利用 toupper() 和 tolower() 函数</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ConversionofLetterTwo</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">char</span> ch;</span><br><span class="line">	cin &gt;&gt; ch;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (ch &gt;= <span class="string">&#x27;a&#x27;</span> &amp;&amp; ch &lt;= <span class="string">&#x27;z&#x27;</span>)</span><br><span class="line">		ch = <span class="built_in">toupper</span>(ch);</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (ch &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; ch &lt;= <span class="string">&#x27;Z&#x27;</span>)</span><br><span class="line">		ch = <span class="built_in">tolower</span>(ch);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;Invaild Word\n&quot;</span> &lt;&lt; endl;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; ch &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">ConversionofLetterTwo</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a>字符串反转</h2><p>使用 <code>algorithm</code> 中的 <code>reverse</code> 函数</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span>  </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span>  </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span>  </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;  </span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">    string s = <span class="string">&quot;hello&quot;</span>;  </span><br><span class="line">  </span><br><span class="line">    <span class="built_in">reverse</span>(s.<span class="built_in">begin</span>(),s.<span class="built_in">end</span>());  </span><br><span class="line">  </span><br><span class="line">    cout&lt;&lt;s&lt;&lt;endl;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
-
-<p>vector容器也适用，也是写成 <code>reverse(s.begin(),s.end()); </code></p>
-<p><strong>不定长数组用 vector</strong></p>
-<h2 id="vector是不定长数组，能用-访问元素"><a href="#vector是不定长数组，能用-访问元素" class="headerlink" title="vector是不定长数组，能用[]访问元素"></a>vector是不定长数组，能用[]访问元素</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 检测vector能否用[]访问元素</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; v1; <span class="comment">//无参构造</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		v1.<span class="built_in">push_back</span>(i);</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; v1[<span class="number">0</span>] &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; v1[<span class="number">1</span>] &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; v1[<span class="number">9</span>];</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>结论：可以，插入进去就是数组，而且是不定长数组，可以通过[]访问数组元素</p>
-</blockquote>
-<p>长度：数组用length()，容器用size()</p>
-<p>用临时数组来进行条件判断很好用 不要总想着在目的数组上进行数组改动 可以通过临时数组的改动 最后赋值给目的数组</p>
-<p>string库函数，<code>append()</code> 用于在字符串后面进行追加字符串操作</p>
-<h2 id="字符串的替换replace"><a href="#字符串的替换replace" class="headerlink" title="字符串的替换replace()"></a>字符串的替换replace()</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 字符串替换</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test02</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//替换</span></span><br><span class="line">	string str1 = <span class="string">&quot;abcdefgde&quot;</span>;</span><br><span class="line">	str1.<span class="built_in">replace</span>(<span class="number">4</span>, <span class="number">3</span>, <span class="string">&quot;1111&quot;</span>);</span><br><span class="line"></span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;str1 = &quot;</span> &lt;&lt; str1 &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">test02</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="【问题】cin-getline-混合使用时不能输入-直接执行下一行"><a href="#【问题】cin-getline-混合使用时不能输入-直接执行下一行" class="headerlink" title="【问题】cin getline 混合使用时不能输入 直接执行下一行"></a>【问题】cin getline 混合使用时不能输入 直接执行下一行</h2><p>经常会遇到一个问题，就是需要混合使用cin&gt;&gt;, cin.getline(), getline()时，有时会碰到不等你输入，就直接运行下一行的情况</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">	<span class="type">int</span> N;</span><br><span class="line">	string c;</span><br><span class="line">	cin &gt;&gt; N;</span><br><span class="line">	cin &gt;&gt; c;</span><br><span class="line"></span><br><span class="line">	string s;</span><br><span class="line">	<span class="built_in">getline</span>(cin, s);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>结果是因为缓冲区还剩一个回车符 直接赋给了getline() 然后就输入执行结束 实际上getline的字符你还没有输入 所以看到这种情况懵了</p>
-<blockquote>
-<p>先cin&gt;&gt;，再getline()的情况，是因为cin&gt;&gt;会在缓冲区中多出一个回车符，即你输入完之后，敲完回车符之后，cin&gt;&gt;会在缓冲区中再多保留一个回车符，这个多出来的回车符就导致下面getline()执行时，自动读取缓冲区内的回车符，于是这句getline()就相当于你什么都没有敲就执行完了，自然就会去执行下面的语句了。</p>
-<p>这种情况的解决方法很简单，在cin&gt;&gt;后面加一句cin.get()就行了，这个cin.get()就会将缓冲区内多出来的回车符消耗掉，于是后面的输入就正常了</p>
-</blockquote>
-<p>修改过后的代码</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> N;</span><br><span class="line">	string c;</span><br><span class="line">	cin &gt;&gt; N;</span><br><span class="line">	cin &gt;&gt; c;</span><br><span class="line">	cin.<span class="built_in">get</span>(); <span class="comment">// 用 getchar();也行</span></span><br><span class="line">	<span class="comment">//getchar(); //如果是char c的话</span></span><br><span class="line">	string s;</span><br><span class="line">	<span class="built_in">getline</span>(cin, s);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="sort-Algorithm"><a href="#sort-Algorithm" class="headerlink" title="sort() - Algorithm"></a>sort() - Algorithm</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//方法一：定义比较函数（最常用）</span></span><br><span class="line"><span class="comment">//情况一：数组排列</span></span><br><span class="line"><span class="type">int</span> A[<span class="number">100</span>];</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp1</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span><span class="comment">//int为数组数据类型</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> a&gt;b;<span class="comment">//降序排列</span></span><br><span class="line"><span class="comment">//return a&lt;b;//默认的升序排列</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">sort</span>(A,A+<span class="number">100</span>,cmp1);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 参考文章：https://www.cnblogs.com/stones-dream/p/10183210.html</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="常犯的一个错误：段错误"><a href="#常犯的一个错误：段错误" class="headerlink" title="常犯的一个错误：段错误"></a>常犯的一个错误：段错误</h2><p>经常原因：for循环从最大长度到0 经常只改了第一条件，第三条件 i++ 总是忘记改成 i–</p>
-]]></content>
-      <categories>
-        <category>C/C++</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
       </tags>
   </entry>
 </search>
