@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://benn314.github.io/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/cloudflare-cdn.png">
 <meta property="og:image" content="https://benn314.github.io/2023/12/13/Hexo%E5%AE%A2%E5%88%B6%E5%8C%96%E5%8F%8ABug%E8%A7%A3%E5%86%B3/Successful-activation.png">
 <meta property="article:published_time" content="2023-12-13T09:35:29.000Z">
-<meta property="article:modified_time" content="2024-01-01T10:01:58.741Z">
+<meta property="article:modified_time" content="2024-01-01T10:17:22.931Z">
 <meta property="article:author" content="Ben">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="前端性能优化">
@@ -255,7 +255,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-01-01 18:01:58" itemprop="dateModified" datetime="2024-01-01T18:01:58+08:00">2024-01-01</time>
+      <time title="修改时间：2024-01-01 18:17:22" itemprop="dateModified" datetime="2024-01-01T18:17:22+08:00">2024-01-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -295,7 +295,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>5.7k</span>
+      <span>5.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -522,13 +522,13 @@
 <br>
 
 <h2 id="自定义个人主页"><a href="#自定义个人主页" class="headerlink" title="自定义个人主页"></a>自定义个人主页</h2><blockquote>
-<p>这是一篇被耽搁了的文章，刚新建完个人主页的时候有很多想说很多想写的，过了两天后发现没有什么想法了，下面主要内容是记录定制遇到的一些问题和解决方案吧。（临时写的，写的有点乱，如果你希望通过我下面的记录尝试解决自己遇到的困难，请多包涵~）</p>
+<p>这是一篇被耽搁了的文章，刚新建完个人主页的时候有很多想说很多想写的，过了两天后发现没有什么想法了，下面主要内容是记录定制遇到的一些问题和解决方案吧。（临时写的，写的有点乱（不过思路是正确的，有不懂的地方可以在下方评论区留言，我看到了会及时回复（邮箱订阅没有更新，所以可能无法及时收到新评论通知）），如果你希望通过我下面的记录尝试解决自己遇到的困难，请多包涵~）</p>
 </blockquote>
 <p>Hexo 博客框架的首页一般都是包含 post 布局的，我希望别人进入我的博客的时候，能先了解到我自己本身是一个怎么样的人，我希望在个人主页体现我的价值观 or 世界观 or 其他的一些基本信息，同时隐藏或删除不需要的冗余信息，所以我需要重新定制个人主页。</p>
 <p>由于我的 Hexo 博客配置加入了 Live-2D 和 Waline 评论系统，这两个是全局配置的，我暂时找不到更改它们为局部布局的方法，所以我无法通过 <code>Hexo new page “个人主页”</code> 的方式来修改个人主页（将原 config/yaml 的 menu 配置中的 Home <code>/</code> 换成 <code>/blog/</code>，并将新首页替换成个人主页的文件来完成主页重定制）</p>
 <p>所以我决定新建一个 <code>Homepage</code> 的个人主页的仓库来存储我的个人主页相关代码并部署到 vercel 上，这个方案是可行的，我原本是想将我的根域名 ben43.cn 解析给 Homepage（我的域名注册来自阿里云），然后创建二级域名 blog.ben43.cn 解析到博客首页，但由于我的博客先前通过 CloudFlare 进行 CDN 加速，所以该域名的 CDN 服务器解析用的是 CloudFlare 的，而部署到 Vercel 的话必须要用 Vercel 的 CDN 服务器解析，否则配置的域名解析无效，即无法通过绑定的域名访问。而这就有点矛盾了，因为我的博客是部署到 Github Page 上的，不用国内 CDN 加速的话，在国内不使用 VPN 访问会很慢，所以我并不想放弃对站点的 CDN 加速解析（同时 CloudFlare 是我目前已知的不需要域名备案即可加速的 CDN 加速网站，之前首先考虑又拍云和阿里云都需要先进行域名备案（一个 ICP 备案码需要100块，我目前并不想花销在此））（补充：根域名和二级域名的 CDN 服务器配置都是相同的，无法分别为各自设置 CDN 服务器）</p>
-<p>所以出此下策，我只能使用两个域名来分别管理我的个人主页和博客（可能会有更好的解决办法，但我现在尚且没有找到（时间紧）），如果要更换 Github Page 的绑定域名的话，记得把之前 CloudFlare 配置的站点信息删除，并重新绑定。</p>
-<p>我在配置解析记录的时候犯了一个错误，将解析记录的记录值添加为原始域名，应该添加服务器的IP地址的（例如 Vercel，你需要添加的记录值是：cname-china.vercel-dns.com，而不是你部署到 vercel 仓库的地址），这个导致我前期无法通过绑定的域名正确打开仓库页面，如果你想重定向需要到服务部署端进行重定向设置，而不是到域名服务端配置</p>
+<p>所以出此下策，我只能使用两个域名来分别管理我的个人主页和博客（可能会有更好的解决办法，但我现在尚且没有找到（时间紧）补充：如果我将博客和主页都部署到 Vercel 的话，就不需要用两个域名分别管理了，因为 Vercel 的 有中国区解析服务器，故不需要 CDN 加速，国内也能正常速度访问，故一个域名拆分为根域名和二级域名即可控制），如果要更换 Github Page 的绑定域名的话，记得把之前 CloudFlare 配置的站点信息删除，并重新绑定。</p>
+<p>我在配置解析记录的时候犯了一个错误，将解析记录的记录值添加为原始域名，应该添加服务器的 IP 地址的（例如 Vercel，你需要添加的记录值是：cname-china.vercel-dns.com，而不是你部署到 vercel 仓库的地址），这个导致我前期无法通过绑定的域名正确打开仓库页面，如果你想重定向域名需要到部署端进行重定向设置，而不是到域名端配置。</p>
 <br>
 
 <h2 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h2><ul>
@@ -634,13 +634,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">7k</span>
+    <span title="站点总字数">8k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">27 分钟</span>
+    <span title="站点阅读时长">28 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
