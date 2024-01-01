@@ -2648,3 +2648,17 @@ img {
 .juejin:hover {
   opacity: 1;
 }
+.homepage {
+  background-image: url("/images/egolure.svg");
+  background-size: 1.3em 1.3em;
+  opacity: 0.9;
+  background-position: 0.05rem 0.2rem;
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 0rem;
+/*鼠标停留在图标上时，图标呈现发光效果*/
+}
+.homepage:hover {
+  opacity: 1;
+}
